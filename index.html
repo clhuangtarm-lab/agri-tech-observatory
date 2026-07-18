@@ -60,7 +60,7 @@ footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12
   <a class="brand" onclick="go('#/')">農業科技觀測站 <small>國際農業科技情報</small></a>
   <nav>
     <a onclick="go('#/')">首頁</a>
-    <a onclick="go('#/latest')">最新文章</a>
+    <a onclick="go('#/latest')">文章總覽</a>
     <a onclick="go('#/topics')">主題分類</a>
   </nav>
   <form class="search" onsubmit="return doSearch(event)">
@@ -126,7 +126,7 @@ function render(){
   else if(h.startsWith('#/country/')){ const c=decodeURIComponent(h.split('/')[2]); out=listView(c, DATA.filter(a=>a.country===c)); }
   else if(h.startsWith('#/search')){ const q=decodeURIComponent((h.split('?q=')[1]||'')); const ql=q.toLowerCase();
     out=listView('搜尋：'+q, DATA.filter(a=>((a.public_title||'')+(a.public_summary||'')+(a.public_article||'')).toLowerCase().includes(ql)), `找到 ${DATA.filter(a=>((a.public_title||'')+(a.public_summary||'')+(a.public_article||'')).toLowerCase().includes(ql)).length} 篇`); }
-  else if(h==='#/latest') out = listView('最新文章', [...DATA].sort((a,b)=>(b.public_date||'').localeCompare(a.public_date||'')));
+  else if(h==='#/latest') out = listView('文章總覽', [...DATA].sort((a,b)=>(b.public_date||'').localeCompare(a.public_date||'')));
   else if(h==='#/topics') out = topics();
   else out = home();
   app.innerHTML = out; window.scrollTo(0,0);
