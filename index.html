@@ -94,7 +94,9 @@ function home(){
     <p class="lead">追蹤美國、日本、歐盟、韓國等地的智慧農業、氣候韌性、植物健康、森林經濟等發展，每週精選並轉譯為可讀的深度文章。本站為個人研究與內容經營用途。</p>
     <h2>最新公開文章</h2>`;
   const items = [...DATA].sort((a,b)=>(b.public_date||'').localeCompare(a.public_date||''));
-  return intro + (items.length?items.map(card).join(''):'<div class="empty">尚無已發布的公開文章。</div>');
+  const preview = items.slice(0, 6);
+  const more = items.length > 6 ? `<p style="text-align:center;margin:16px 0"><a class="tag" onclick="go('#/latest')">查看全部 ${items.length} 篇 →</a></p>` : '';
+  return intro + (preview.length?preview.map(card).join(''):'<div class="empty">尚無已發布的公開文章。</div>') + more;
 }
 function topics(){
   const counts={}; DATA.forEach(a=>counts[a.topic]=(counts[a.topic]||0)+1);
