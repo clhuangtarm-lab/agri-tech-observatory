@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>韓國全南大學開發AI系統，大幅提升果園地圖測繪與建模精準度 - 農業科技觀測站</title>
+<meta name="description" content="韓國全南大學團隊針對商業果園規模大、樹木密集、結構複雜的挑戰，結合無人機空拍與地面機器人光達技術，開發新AI系統，改善精準農業所需的果園3D建模與地圖測繪精準度。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/117/">
+<meta property="og:title" content="韓國全南大學開發AI系統，大幅提升果園地圖測繪與建模精準度 - 農業科技觀測站">
+<meta property="og:description" content="韓國全南大學團隊針對商業果園規模大、樹木密集、結構複雜的挑戰，結合無人機空拍與地面機器人光達技術，開發新AI系統，改善精準農業所需的果園3D建模與地圖測繪精準度。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/117/">
+<meta property="og:image" content="https://i.ibb.co/6cNFrrhw/Chat-GPT-Image-2026-7-25-02-10-14.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "韓國全南大學開發AI系統，大幅提升果園地圖測繪與建模精準度", "description": "韓國全南大學團隊針對商業果園規模大、樹木密集、結構複雜的挑戰，結合無人機空拍與地面機器人光達技術，開發新AI系統，改善精準農業所需的果園3D建模與地圖測繪精準度。", "datePublished": "2026-07-25", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/117/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/6cNFrrhw/Chat-GPT-Image-2026-7-25-02-10-14.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>韓國全南大學開發AI系統，大幅提升果園地圖測繪與建模精準度</h1><div class="meta"><span>發布日 2026-07-25</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://i.ibb.co/6cNFrrhw/Chat-GPT-Image-2026-7-25-02-10-14.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/6cNFrrhw/Chat-GPT-Image-2026-7-25-02-10-14.png" alt="韓國全南大學開發AI系統，大幅提升果園地圖測繪與建模精準度" loading="lazy" referrerpolicy="no-referrer"></a><p>空拍與地面機器人如何共同建立果園數位模型
+AI整合無人機影像與LiDAR資料，降低林冠遮蔽及長距離定位誤差
+
+精準農業要進一步導入果實產量估算、局部噴藥、樹體表型調查與自動採收，首先需要一張能準確反映果園空間與樹體結構的數位地圖。問題在於，商業果園面積大、果樹排列密集，枝葉也會遮蔽樹幹及地面，使單一感測方式很難同時掌握全區位置與樹體細節。
+
+韓國全南大學研究團隊開發一套跨感測資料融合系統，將低空無人機拍攝的遙測影像，與地面機器人蒐集的光達及慣性量測資料整合。無人機先提供果園的整體地理位置，地面機器人再補充林冠下方與單株樹體的立體結構，人工智慧則負責辨認兩類資料中的相同樹列、林冠形狀與開放空間，將細部量測準確放回整座果園地圖。研究以蘋果園進行測試，地面機器人行駛約1.3公里後，定位誤差仍能控制在數公分尺度，並較傳統方法有效抑制長距離移動所累積的偏移。
+
+【空拍掌握全區位置，卻看不到林冠下方】
+
+無人機搭配全球導航衛星系統，可以快速拍攝大面積果園，並將多張影像拼接成具有地理座標的正射影像。從空中可辨識果園邊界、樹列配置與林冠覆蓋，也適合建立全區基礎地圖。不過，果樹枝葉密集時，空拍影像主要記錄林冠上方，樹幹、枝條、地面及樹列間通道容易受到遮蔽。若要量測樹高、冠層結構，或引導機器人在樹列間行駛，僅靠空中影像仍然不足。季節也會改變影像外觀。開花、著果、枝葉繁茂與落葉後的果園，在色彩與紋理上差異很大，使依賴外觀特徵的定位方法容易失準。
+
+【地面光達能看見樹體細節，長距離移動卻會逐漸偏移】
+
+搭載光達與慣性量測單元的地面機器人，可在行進過程中發射雷射並量測回波，建立樹幹、枝葉、地面及通道的三維點雲。相較於空拍影像，這類資料更適合呈現單株果樹結構與林冠下方環境。機器人通常會依據連續量測結果推估自身位置，稱為光達—慣性里程計。短距離內可保持相當高的精度，但每一次推算都可能產生些微誤差，行駛距離愈長，偏移便會逐步累積。果園林冠也會削弱衛星訊號，使地面機器人無法持續依賴全球導航衛星系統修正位置。當樹列外觀高度重複時，機器人還可能把相似位置互相混淆，導致整體地圖扭曲或錯位。
+
+【AI辨認不同感測資料中的相同結構】
+
+研究團隊的做法，是讓無人機地圖成為地理位置基準，再利用深度學習尋找空拍影像與地面光達資料之間的對應關係。團隊先由無人機依規劃航線拍攝蘋果園，製作高解析度正射影像，並將影像切分為不同區塊。地面機器人則在相同區域行駛，蒐集光達點雲與慣性資料。
+
+三維點雲接著轉換成由上往下觀看的二維鳥瞰圖，保留林冠高度、表面反射及局部結構密度等資訊。雖然空拍影像與光達鳥瞰圖的外觀不同，兩者仍會呈現相同的樹列方向、林冠分布及通道位置。AI模型透過雙分支架構，分別提取空拍影像與光達鳥瞰圖的特徵，再以跨注意力機制比較兩類資料，找出同一區域中的對應結構。後續再進行多尺度位置修正，逐步縮小兩張圖之間的偏差。
+
+找到對應位置後，系統會利用空拍地圖修正地面機器人的移動軌跡，再將校正結果納入位姿圖估計。這項方法不是只修正單一時間點，而是同時考量機器人移動前後的位置關係，使整段路徑保持一致。完成融合後，果園數位模型可同時包含兩種資訊：一是由無人機提供的全區地理位置與林冠分布，二是由地面光達取得的樹體高度、結構密度及樹列細節。
+
+這種分工能補足兩類感測方法的限制。空拍影像缺乏林冠下方資訊，但位置範圍完整；地面機器人能取得高解析度三維資料，卻容易在長距離移動後發生漂移。將兩者結合後，細部資料便能準確放回整體果園空間。
+
+【季節變化下仍能維持定位穩定】
+
+果園影像會隨季節改變，傳統影像配對方法若過度依賴顏色與紋理，容易因葉量、光線及地表狀態不同而失效。研究團隊的模型較重視樹列配置、林冠輪廓與空間結構，因此面對季節差異時仍能維持配對能力。測試結果顯示，系統在約1.3公里的行駛範圍內，定位精度可達數公分尺度，長距離偏移也明顯低於傳統方法。
+
+不過，研究結果來自特定蘋果園。不同果樹種類、整枝方式、坡度、樹列間距與林冠密度，都可能影響模型判讀。若果園缺乏規則樹列，或枝葉嚴重交錯，仍需進一步驗證。
+
+【數位果園模型可支援哪些作業】
+
+準確的果園地圖並非單純用於視覺呈現，而是農業機器人執行工作的空間基礎。機器人需要知道樹列、通道與障礙物的位置，才能規劃巡檢、割草、運輸、噴藥與採收路徑。若定位持續漂移，設備可能重複作業、遺漏區域，甚至接近樹幹或撞擊設施。融合後的數位模型也可用來量測樹高、冠層體積及結構差異，再搭配影像或其他感測資料，分析樹勢與健康狀態。若能持續更新，便可比較不同季節與年度的變化，作為修剪、施肥、病害監測與產量估算的參考。
+
+研究團隊將這種持續更新的架構稱為果園的「動態數位模型」。它不只是一次性的測繪成果，而是隨著植株生長、季節變化與田間作業持續修正的資料基礎。
+
+這套系統已考量在嵌入式設備上運行，意味未來可能直接部署於農業機器人，而不必將所有資料送回高效能電腦處理。若能即時修正定位，機器人便能在行進中持續對照全區地圖。不過，實際導入仍涉及無人機測繪、光達設備、資料處理與模型維護成本。果園也需要建立可重複使用的基礎地圖，並在植株與地形明顯改變後重新更新。
+
+此外，數公分定位精度不代表機器人已能自動完成所有農務。噴藥還需辨識目標位置與風場，採收需要判斷果實成熟度及遮蔽，運輸則要處理人員、機具與臨時障礙。地圖提供的是共同空間基礎，後續仍需結合不同作業模組。
+</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Researchers develop new AI system for highly accurate mapping and modeling of orchards<br>原始網址：<a href="https://phys.org/news/2026-07-ai-highly-accurate-orchards.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-07-ai-highly-accurate-orchards.html</a><br>發布日期：2026-07-22</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

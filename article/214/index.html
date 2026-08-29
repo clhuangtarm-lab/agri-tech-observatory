@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>890張田間照片擴增近9,000張影像，AI聚焦辨識番茄葉病害 - 農業科技觀測站</title>
+<meta name="description" content="澳洲查爾斯達爾文大學與斯里蘭卡佩拉德尼亞大學等團隊建置首個完整的田間番茄葉片影像資料集「SLIF-Tomato」（近9000張影像），用以訓練AI病害辨識模型，盼藉此降低番茄採收損失並減少因誤用化學藥劑帶來的健康風險。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/214/">
+<meta property="og:title" content="890張田間照片擴增近9,000張影像，AI聚焦辨識番茄葉病害 - 農業科技觀測站">
+<meta property="og:description" content="澳洲查爾斯達爾文大學與斯里蘭卡佩拉德尼亞大學等團隊建置首個完整的田間番茄葉片影像資料集「SLIF-Tomato」（近9000張影像），用以訓練AI病害辨識模型，盼藉此降低番茄採收損失並減少因誤用化學藥劑帶來的健康風險。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/214/">
+<meta property="og:image" content="https://i.ibb.co/pB0s79kZ/Chat-GPT-Image-2026-8-22-01-00-11.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "890張田間照片擴增近9,000張影像，AI聚焦辨識番茄葉病害", "description": "澳洲查爾斯達爾文大學與斯里蘭卡佩拉德尼亞大學等團隊建置首個完整的田間番茄葉片影像資料集「SLIF-Tomato」（近9000張影像），用以訓練AI病害辨識模型，盼藉此降低番茄採收損失並減少因誤用化學藥劑帶來的健康風險。", "datePublished": "2026-08-22", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/214/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/pB0s79kZ/Chat-GPT-Image-2026-8-22-01-00-11.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>890張田間照片擴增近9,000張影像，AI聚焦辨識番茄葉病害</h1><div class="meta"><span>發布日 2026-08-22</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://i.ibb.co/pB0s79kZ/Chat-GPT-Image-2026-8-22-01-00-11.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/pB0s79kZ/Chat-GPT-Image-2026-8-22-01-00-11.png" alt="890張田間照片擴增近9,000張影像，AI聚焦辨識番茄葉病害" loading="lazy" referrerpolicy="no-referrer"></a><p>田間拍攝的作物影像經常混入土壤、陰影及重疊葉片，與背景乾淨、光線穩定的實驗室照片不同。研究團隊建立一套來自斯里蘭卡田間的番茄葉片資料集，並利用輕量化AI模型排除背景干擾，辨識健康葉片與7類病害，研究中的準確率超過99％。
+
+【890張原始照片，擴增為8,934張影像】
+
+這套「斯里蘭卡田間番茄資料集」（Sri Lankan In-Field Tomato Dataset，SLIF-Tomato）由澳洲查爾斯達爾文大學、斯里蘭卡佩拉德尼亞大學等研究人員共同建立。
+
+研究團隊在不同田間條件下取得890張番茄葉片原始照片，涵蓋8類葉片狀態，包括健康葉片，以及細菌性斑點病、早疫病、嵌紋病、白粉病、斑枯病、萎凋病與晚疫病。經過兩階段資料增強後，影像總數增加至8,934張。
+
+資料集除了為每張影像標示類別，也利用方框註記病斑位置，使模型能同時學習葉片屬於哪一類，以及症狀實際出現的位置。這是研究團隊所稱第一套具備完整類別標籤與病斑框選標註，並在多元真實環境中蒐集的田間番茄葉片資料集。
+
+【先辨識重要特徵，再尋找病斑位置】
+
+研究使用「反向殘差卷積區塊注意力模組」（Inverted Residual Convolutional Block Attention Module，IR-CBAM）分析影像。這套方法先判斷哪些特徵較具辨識價值，例如色澤、紋理與邊緣，再定位影像中應優先觀察的位置。
+
+模型因此能將注意力集中在實際病斑，降低土壤、陰影及背景葉片造成的干擾，不必平均處理影像中的所有區域。研究團隊認為，這是模型在複雜田間照片中提高辨識準確率的重要原因。
+
+IR-CBAM採取輕量化設計，運算需求相對較低，未來有機會應用於手機或嵌入式系統等資源有限的裝置。
+
+【研究成果仍待走向實際應用】
+
+番茄葉片病害若未能及時發現，或辨識結果錯誤，可能造成產量損失；過度使用化學藥劑也會增加人體健康與環境風險。傳統判斷主要依靠農民或農業專家巡查，需要投入時間，也可能延誤處理時機。
+
+研究中的模型辨識準確率超過99％，但這項成果目前仍處於研究階段，下一步才是進入實際農業環境，並擴充更多作物及病害資料。研究團隊期待藉由貼近田間狀況的資料與輕量化模型，發展成本較低的病害早期辨識工具，尤其協助較難持續取得農業專業服務的地區。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：AI learns to spot tomato diseases using nearly 9,000 field images<br>原始網址：<a href="https://phys.org/news/2026-08-ai-tomato-diseases-field-images.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-08-ai-tomato-diseases-field-images.html</a><br>發布日期：2026-08-17</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

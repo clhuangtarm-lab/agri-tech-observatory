@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>植物也能戴上「穿戴裝置」：葉片貼片與莖部感測器，讓農民提早掌握缺水、鹽害與生長異常 - 農業科技觀測站</title>
+<meta name="description" content="美國塔夫茨大學（Tufts）團隊開發植物「穿戴式」感測器，希望在作物出現捲葉、生長遲緩等可見症狀「之前」，就抓到逆境訊號。研究刊於《ACS Applied Materials &amp; …">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/51/">
+<meta property="og:title" content="植物也能戴上「穿戴裝置」：葉片貼片與莖部感測器，讓農民提早掌握缺水、鹽害與生長異常 - 農業科技觀測站">
+<meta property="og:description" content="美國塔夫茨大學（Tufts）團隊開發植物「穿戴式」感測器，希望在作物出現捲葉、生長遲緩等可見症狀「之前」，就抓到逆境訊號。研究刊於《ACS Applied Materials &amp; …">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/51/">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "植物也能戴上「穿戴裝置」：葉片貼片與莖部感測器，讓農民提早掌握缺水、鹽害與生長異常", "description": "美國塔夫茨大學（Tufts）團隊開發植物「穿戴式」感測器，希望在作物出現捲葉、生長遲緩等可見症狀「之前」，就抓到逆境訊號。研究刊於《ACS Applied Materials & …", "datePublished": "2026-07-12", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/51/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>植物也能戴上「穿戴裝置」：葉片貼片與莖部感測器，讓農民提早掌握缺水、鹽害與生長異常</h1><div class="meta"><span>發布日 2026-07-12</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/global/">國際</a></div><p>農民在田間看到葉片捲曲、植株矮化或生長停滯時，作物往往已經承受數日壓力。等到症狀明顯出現，缺水、鹽分累積或養分失衡可能已影響光合作用與生長。美國塔夫茨大學研究團隊近期開發一套植物「穿戴式感測器」，希望在作物外觀尚未出現異常前，便掌握植物的生理反應。
+
+這套系統包含兩種裝置：一種是貼附於葉片表面的薄型感測器，外觀看起來像暫時性刺青；另一種則是纏繞在莖部、可隨植物生長伸展的感測帶。兩者分別量測葉片水分交換狀況及莖部直徑變化，藉此判斷植物是否正面臨缺水、鹽害或生長受阻。更特別的是，葉片感測器不需要外接電池，而是利用植物蒸散所產生的水分交換自行發電。
+
+【從空中俯瞰，走向植物本身的即時反應】
+
+目前農業監測已廣泛使用衛星、無人機、土壤感測器與田間氣象站。衛星與無人機可以透過可見光、紅外線及微波影像，觀察作物覆蓋、葉色、生長不均、溫度、病蟲害及土壤含水量。土壤感測器則能量測水分、溫度、酸鹼值及部分養分，氣象站也能提供氣溫、濕度、降雨、風速與日照等資訊。這些工具能協助農民掌握田區整體環境，但多半反映兩種情況：一是可能在未來對作物造成影響的外部條件，二是已經發生的生長異常或受害結果。
+
+植物穿戴式感測器研究團隊希望直接觀察植物當下如何回應環境，在葉片萎凋、捲曲或植株生長受阻前，提供較早的警示。研究主持人、塔夫茨大學電機與電腦工程學教授Sameer Sonkusale表示，這項技術的發展目標是讓整片農田未來能布建植物層級的監測網路。每一株或每一區代表性作物都能回傳缺水、鹽害、病害或養分失衡的早期訊號。衛星與無人機提供的是空中視角，植物穿戴裝置則提供更貼近植株本身的觀察。
+
+【葉片感測器量測「空氣有多想把水吸走」】
+
+葉片感測器主要量測蒸氣壓差，也就是VPD（Vapor Pressure Deficit，空氣吸收水分的能力），當VPD偏高時，代表空氣較乾燥，葉片水分散失速度會加快。植物通常會關閉氣孔，降低蒸散量，避免過度失水。氣孔關閉雖然能減緩脫水，也會限制二氧化碳進入葉片，使光合作用與生長速度下降。因此，VPD不只是環境濕度指標，也能反映植物正面臨的水分壓力。
+
+【利用植物蒸散水分自行發電】
+
+葉片感測器的核心材料是五氧化二釩晶體。研究人員將五氧化二釩製成極薄的奈米片，再層層堆疊成膜。感測器上方另設置一層由碳原子構成的石墨烯，形成可以讓水氣通過的微型篩網。當植物蒸散產生的水分穿過石墨烯，進入五氧化二釩奈米片層後，水分會形成離子，並在材料內移動產生電流。水分交換愈強，產生的電流也愈大，感測器產生的電力只有微瓦等級，但搭配低功耗電子元件及儲能裝置，已足以支援定期量測。
+
+【莖部感測帶記錄植物有沒有繼續長大】
+
+葉片感測器觀察的是較快速的水分交換反應，莖部感測帶則記錄較慢的生長變化。莖部裝置採用日本剪紙藝術「切紙」的結構概念，在材料表面設計特殊切口，使感測帶可以隨著莖部膨大伸展與變形。感測器外層塗覆一種稱為共熔凝膠的柔軟導離子材料。當莖部直徑增加或縮小時，凝膠的形狀與電阻會隨之改變，系統便能持續追蹤莖粗變化。
+
+植物健康生長時，莖部直徑通常會逐漸增加；遭遇缺水或鹽害時，生長可能趨緩，莖部甚至會暫時收縮。將葉片與莖部感測器搭配使用，可以同時掌握不同時間尺度的生理反應。葉片感測器較快反映水分散失狀況，莖部感測器則呈現生長累積結果。
+
+【甜椒試驗辨識缺水與鹽害】
+
+研究團隊以甜椒植株進行測試，觀察健康植株、缺水植株及鹽分逆境植株的差異。健康甜椒的VPD會隨每日空氣濕度變化呈現規律起伏，反映正常的日夜水分交換週期。缺水植株的VPD則呈現持續上升趨勢，顯示葉片面臨較強的水分散失壓力。鹽分逆境植株呈現另一種反應。與健康對照組相比，其VPD反而較低。研究人員推測，這可能與鹽分影響根系吸水能力及氣孔調節有關。莖部感測器也記錄到明顯差異，健康植株的莖部持續增粗，受壓力植株則出現生長減緩或直徑縮小。兩類感測訊號搭配後，系統不只判斷植物是否受到壓力，也有機會進一步區分不同逆境類型。
+
+【從田區平均值，走向植株層級管理】
+
+現有農業監測多以田區或區域為單位，提供平均溫度、土壤水分或影像變化。這類資訊適合掌握整體趨勢，但可能忽略同一田區內不同植株的差異。植物穿戴式感測器讓監測尺度進一步縮小到單株或代表性植株，直接讀取作物的生理反應。對設施農業、高價值果樹、育苗生產或鹽害風險較高的田區而言，這類即時監測可能具有較高應用價值。農民可以在肉眼症狀出現前察覺異常，縮短發現問題與採取措施之間的時間。
+
+
+臺灣設施農業與高價作物對早期逆境、病害預警需求高。逐株葉片感測若成熟，可對照農業部智慧農業與植物醫師的監測體系。不過，這項技術目前仍處於研究與系統開發階段。未來能否普及，仍需評估感測器成本、使用壽命、田間耐候性、不同作物的校正需求、資料判讀方式及大面積布建的可行性。
+
+
+#智慧監測 #IPM #設施農業 #植物感測
+
+
+原文標題：Wearables to track plant health: Farmers could use real-time information to manage crop conditions
+原始網址：https://phys.org/news/2026-07-wearables-track-health-farmers-real.html</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Wearables to track plant health: Farmers could use real-time information to manage crop conditions<br>原始網址：<a href="https://phys.org/news/2026-07-wearables-track-health-farmers-real.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-07-wearables-track-health-farmers-real.html</a><br>發布日期：2026-07-09</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

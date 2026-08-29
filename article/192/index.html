@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI辨識未清洗馬鈴薯，每小時最高分選10公噸 - 農業科技觀測站</title>
+<meta name="description" content="慕尼黑工業大學(TUM)機械工程系學生Benedikt Keßler以自身馬鈴薯農場背景創立新創公司Karevo，開發以逾10萬張影像訓練的AI光學辨識系統，可在每小時分選10噸馬鈴薯、辨識準確率達95%，能偵測異物及腐爛、龜裂、金針蟲害等7類缺陷，並可直接處理未經清洗的馬鈴薯，適合中小型農場使用。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/192/">
+<meta property="og:title" content="AI辨識未清洗馬鈴薯，每小時最高分選10公噸 - 農業科技觀測站">
+<meta property="og:description" content="慕尼黑工業大學(TUM)機械工程系學生Benedikt Keßler以自身馬鈴薯農場背景創立新創公司Karevo，開發以逾10萬張影像訓練的AI光學辨識系統，可在每小時分選10噸馬鈴薯、辨識準確率達95%，能偵測異物及腐爛、龜裂、金針蟲害等7類缺陷，並可直接處理未經清洗的馬鈴薯，適合中小型農場使用。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/192/">
+<meta property="og:image" content="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI辨識未清洗馬鈴薯，每小時最高分選10公噸", "description": "慕尼黑工業大學(TUM)機械工程系學生Benedikt Keßler以自身馬鈴薯農場背景創立新創公司Karevo，開發以逾10萬張影像訓練的AI光學辨識系統，可在每小時分選10噸馬鈴薯、辨識準確率達95%，能偵測異物及腐爛、龜裂、金針蟲害等7類缺陷，並可直接處理未經清洗的馬鈴薯，適合中小型農場使用。", "datePublished": "2026-08-15", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/192/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>AI辨識未清洗馬鈴薯，每小時最高分選10公噸</h1><div class="meta"><span>發布日 2026-08-15</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/germany/">德國</a></div><a href="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" alt="AI辨識未清洗馬鈴薯，每小時最高分選10公噸" loading="lazy" referrerpolicy="no-referrer"></a><p>馬鈴薯分選需要逐顆檢查外觀，作業人員往往得長時間站在充滿噪音與粉塵的環境中。德國新創公司Karevo因此開發AI光學分選設備，透過超過10萬張影像訓練模型，辨識馬鈴薯損傷的準確率達95％，每小時最高可處理10公噸。
+
+這套設備的另一項特點，是能直接辨識未清洗的馬鈴薯。不同產區的土壤、品種及儲藏條件，會使馬鈴薯表面呈現明顯差異，傳統辨識方法容易受到泥土與外觀變化影響。Karevo則可依農場實際處理的馬鈴薯調整AI模型，提高系統對不同原料狀態的適應性。
+
+【可辨識異物及7類缺陷】
+
+馬鈴薯通過輸送帶時，光學系統會拍攝外觀影像，再由AI模型判讀是否需要分流。系統目前可辨識異物，以及腐爛、裂傷、金針蟲危害等7類缺陷，辨識馬鈴薯損傷的準確率達到95％。
+
+共同創辦人Benedikt Keßler成長於馬鈴薯農場，熟悉人工分選的工作負擔。他在慕尼黑工業大學攻讀機械工程期間，開始構想以AI協助馬鈴薯分選，並於碩士論文研究階段投入技術開發。考量小型及家庭農場常面臨設備價格高、體積大及維修不易等問題，團隊將設備設計得較小型，並採用模組化結構，方便維護及整合至既有分選系統，設備已於2025年秋季進入市場。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Sorting potatoes with AI<br>原始網址：<a href="https://phys.org/news/2026-08-potatoes-ai.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-08-potatoes-ai.html</a><br>發布日期：2026-08-11</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

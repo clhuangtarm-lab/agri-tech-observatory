@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>賓州州立大學：無土栽培系統設計會左右微生物生態與作物影響 - 農業科技觀測站</title>
+<meta name="description" content="賓州州立大學研究團隊分析5種水耕無土栽培系統的細菌相，發現系統設計會強烈影響養液中的微生物組成，栽培週期也顯著影響微生物群落結構，顯示不同系統需要各自的微生物管理策略。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/166/">
+<meta property="og:title" content="賓州州立大學：無土栽培系統設計會左右微生物生態與作物影響 - 農業科技觀測站">
+<meta property="og:description" content="賓州州立大學研究團隊分析5種水耕無土栽培系統的細菌相，發現系統設計會強烈影響養液中的微生物組成，栽培週期也顯著影響微生物群落結構，顯示不同系統需要各自的微生物管理策略。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/166/">
+<meta property="og:image" content="https://i.ibb.co/prXRqZq6/Chat-GPT-Image-2026-8-8-01-10-57.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "賓州州立大學：無土栽培系統設計會左右微生物生態與作物影響", "description": "賓州州立大學研究團隊分析5種水耕無土栽培系統的細菌相，發現系統設計會強烈影響養液中的微生物組成，栽培週期也顯著影響微生物群落結構，顯示不同系統需要各自的微生物管理策略。", "datePublished": "2026-08-08", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/166/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/prXRqZq6/Chat-GPT-Image-2026-8-8-01-10-57.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>賓州州立大學：無土栽培系統設計會左右微生物生態與作物影響</h1><div class="meta"><span>發布日 2026-08-08</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/us/">美國</a></div><a href="https://i.ibb.co/prXRqZq6/Chat-GPT-Image-2026-8-8-01-10-57.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/prXRqZq6/Chat-GPT-Image-2026-8-8-01-10-57.png" alt="賓州州立大學：無土栽培系統設計會左右微生物生態與作物影響" loading="lazy" referrerpolicy="no-referrer"></a><p>無土栽培系統不同，營養液中的微生物也會不同？
+
+無土栽培利用營養液取代傳統土壤，可因應水資源與土地限制，也廣泛應用於番茄、葉菜及香草等作物。然而，營養液若採循環使用，微生物可能隨水流擴散；其中有些有助於植物生長，有些則可能增加病害或食品安全風險。
+
+美國賓州州立大學研究團隊比較5種無土栽培系統，發現系統設計與栽培週期都會影響營養液中的細菌量及菌相組成，但營養液的差異未直接反映在青江菜葉片的細菌量上。
+
+【5種系統的微生物組成各有差異】
+
+研究團隊以青江菜進行試驗，比較5種無土栽培方式：
+1. 深水式水耕：根系直接浸在含氧營養液中
+2. Kratky式：不使用幫浦的被動式水耕
+3. 養液薄膜技術（NFT）：薄層營養液持續流過根部
+4. 潮汐式：定期讓根部浸水及排水
+5. 滴灌式：將營養液滴至根部
+
+研究人員一方面測量營養液中的細菌濃度，並利用16S rRNA基因定序分析菌相組成；另一方面，也直接檢測青江菜葉片上的細菌量，了解營養液中的細菌是否會轉移至葉片。
+
+結果顯示，不同系統的營養液具有不同的細菌量與菌相組成，其中滴灌系統的細菌量最高。微生物組成也會隨栽培週期改變，但部分細菌類群在各週期持續出現，顯示它們可能較能適應無土栽培環境。此外，營養液pH值較高時，細菌量相對較低。
+
+【營養液細菌量不同，葉片細菌量卻相近】
+
+儘管5種系統的營養液細菌量明顯不同，各系統青江菜葉片上的細菌量卻相近。這表示營養液中的微生物量，未必會直接轉化為葉片污染程度。
+
+不過，細菌量較高的系統是否也更有利於食源性病原菌存活，目前仍無法確定。研究測量的是整體細菌量與菌相組成，不能直接將細菌總量較高解讀為食品安全風險較高。
+
+【微生物管理可能需要依系統調整】
+
+無土栽培中的微生物可能參與養分循環、植物生長與病害抑制，也可能在病原菌進入循環營養液後協助其擴散。由於不同系統及栽培週期呈現不同的微生物變化，各類無土栽培設施可能需要採取不同的微生物管理方式。
+
+研究團隊認為，後續仍需釐清系統設計與操作方式如何影響食源性病原菌的存活及持續存在，才能進一步作為無土栽培管理與規範研擬的依據。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Soilless farming system design can determine microbial growth, impact on crops<br>原始網址：<a href="https://phys.org/news/2026-08-soilless-farming-microbial-growth-impact.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-08-soilless-farming-microbial-growth-impact.html</a><br>發布日期：2026-08-05</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

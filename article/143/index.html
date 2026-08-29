@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>全球乾旱威脅作物生產熱點地圖，盤點17種主要作物的乾旱敏感度與生產損失熱點 - 農業科技觀測站</title>
+<meta name="description" content="德拉瓦大學研究團隊量化全球17種主要作物（占全球糧食產量四分之三，含稻米、玉米、小麥、大豆）在雨養與灌溉條件下的乾旱敏感度與相關減產損失，繪出全球乾旱威脅熱點，研究發表於《Nature Communications》。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/143/">
+<meta property="og:title" content="全球乾旱威脅作物生產熱點地圖，盤點17種主要作物的乾旱敏感度與生產損失熱點 - 農業科技觀測站">
+<meta property="og:description" content="德拉瓦大學研究團隊量化全球17種主要作物（占全球糧食產量四分之三，含稻米、玉米、小麥、大豆）在雨養與灌溉條件下的乾旱敏感度與相關減產損失，繪出全球乾旱威脅熱點，研究發表於《Nature Communications》。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/143/">
+<meta property="og:image" content="https://i.ibb.co/j9gNSWjj/Chat-GPT-Image-2026-8-1-11-51-24.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "全球乾旱威脅作物生產熱點地圖，盤點17種主要作物的乾旱敏感度與生產損失熱點", "description": "德拉瓦大學研究團隊量化全球17種主要作物（占全球糧食產量四分之三，含稻米、玉米、小麥、大豆）在雨養與灌溉條件下的乾旱敏感度與相關減產損失，繪出全球乾旱威脅熱點，研究發表於《Nature Communications》。", "datePublished": "2026-08-01", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/143/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/j9gNSWjj/Chat-GPT-Image-2026-8-1-11-51-24.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>全球乾旱威脅作物生產熱點地圖，盤點17種主要作物的乾旱敏感度與生產損失熱點</h1><div class="meta"><span>發布日 2026-08-01</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/b/">氣候韌性與風險管理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://i.ibb.co/j9gNSWjj/Chat-GPT-Image-2026-8-1-11-51-24.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/j9gNSWjj/Chat-GPT-Image-2026-8-1-11-51-24.png" alt="全球乾旱威脅作物生產熱點地圖，盤點17種主要作物的乾旱敏感度與生產損失熱點" loading="lazy" referrerpolicy="no-referrer"></a><p>全球哪些作物產區最怕乾旱？
+研究區分雨養與灌溉農業，盤點17種主要作物的乾旱敏感度與生產損失熱點
+
+氣溫與降雨變化持續影響全球農業，但不同作物、不同生產方式面對乾旱時，受損程度並不相同。即使位於同一地區，依賴天然降雨的農田與具備灌溉條件的農田，也可能出現截然不同的產量反應。
+
+美國德拉瓦大學與義大利杜林理工大學研究團隊，分析水稻、玉米、小麥、大豆等17種主要作物，估算各作物在雨養與灌溉條件下的乾旱敏感度，以及乾旱相關的生產損失。這些作物合計約占全球糧食生產的四分之三，研究因此試圖回答一個關鍵問題：哪些地區一旦發生乾旱，對全球糧食供應的衝擊最值得優先關注？研究辨識出的乾旱敏感熱點，包括美國中西部部分地區、巴西東部、西班牙東部，以及印度中部與北部等。
+
+【乾旱風險不能只看降雨量多寡】
+
+一個地區是否容易受到乾旱衝擊，不能只用降雨量判斷。作物種類、生育期、土壤保水能力、灌溉條件與當地生產規模，都會影響最終損失。某些作物對短期缺水較敏感，若乾旱剛好發生在開花、授粉或籽粒充實期，產量可能快速下降；另一些作物則具有較深根系、較長生育期或較高耐旱能力，短期水分不足未必立即造成同等損失。
+
+此外，同樣的減產比例，發生在小面積產區與全球重要糧倉，對市場的意義也不同。研究因此不只衡量作物對乾旱的生理敏感度，也將生產損失納入分析，藉此找出既容易受旱、又可能牽動大量供應的區域。
+
+【雨養作物對氣候波動更敏感】
+
+研究團隊將雨養與灌溉作物分開分析。結果顯示，依賴天然降雨的作物，對乾旱與氣候變化的敏感度普遍較高。雨養農業沒有額外水源可補充。當降雨不足、土壤水分下降時，作物只能依賴既有土壤儲水與後續降雨。若缺水持續，光合作用、生長與產量形成都可能受到影響。灌溉作物則可透過渠道、噴灌、滴灌或其他供水系統補充水分，使產量在乾旱期間維持相對穩定。部分地區甚至可能因日照增加、病害減少，加上灌溉水源充足，而在偏乾年份維持或提高產量。
+
+不過，灌溉降低的是作物直接面對降雨不足的風險，不代表完全不受乾旱影響。當水庫、河川或地下水同時減少，灌溉農業仍可能面臨限水、抽水成本上升與長期水資源耗損。
+
+【乾旱熱點同時反映氣候與生產結構】
+
+研究辨識出的熱點包括美國中西部、巴西東部、西班牙東部，以及印度中部與北部部分地區。這些區域的共同特徵，不一定都是最乾燥，而是重要作物生產與乾旱敏感性在空間上重疊。
+
+美國中西部是玉米與大豆的重要產區，部分生產高度依賴降雨。當乾旱發生在關鍵生育期，大面積同步減產可能影響飼料、食品與生質燃料供應。巴西東部涵蓋多種農業生產系統，降雨變異與高溫可能同時影響大豆、玉米及其他作物。當主要產區進入乾旱，影響也可能透過出口市場向外擴散。西班牙東部長期面臨水資源壓力，灌溉雖能支撐高價值農業，但水源穩定性本身已成為限制。印度中部與北部則同時具有高人口、重要糧食生產與高度季風依賴等特性，降雨異常可能影響農民收入與區域糧食安全。
+
+【同一作物在不同地區，乾旱反應也不同】
+
+這項研究以作物別分析乾旱敏感度，顯示水稻、玉米、小麥與大豆不能只用全球平均值概括。同一種作物若栽培在不同氣候、土壤與管理條件下，缺水造成的影響可能差異很大。灌溉水稻與雨養水稻的水分來源不同；溫帶玉米與熱帶玉米面對高溫與蒸散壓力的方式也不相同。品種與播種期同樣會改變風險。早熟品種可能避開季末乾旱，但也可能降低產量潛力；延後播種有機會避開一段高溫，卻可能讓開花期遇上另一波缺水。
+
+因此，全球熱點地圖適合用來辨識優先區域，但實際調適措施仍需回到作物、品種與地方生產制度。
+
+【灌溉能降低風險，也可能轉移風險】
+
+研究結果顯示灌溉作物的產量對乾旱較不敏感，但這不表示擴大灌溉就是所有地區的標準答案。灌溉需要穩定水源、能源、輸配水設施與管理制度。若長期依賴地下水補充，可能使地下水位持續下降；若上游與下游、農業與城市用水競爭加劇，也可能形成新的社會與環境風險。在氣候變遷下，部分灌溉系統還可能同時面臨水源減少與作物需水增加。氣溫升高會提高蒸散，使同樣面積需要更多水才能維持生長。
+
+因此，灌溉應與節水技術、作期調整、耐旱品種、土壤保水及水資源治理共同規劃，而不是只增加取水能力。
+
+【乾旱調適應優先放在高損失熱點】
+
+乾旱風險評估的價值，在於協助有限資源投入最需要的區域。若一個地區同時具有高乾旱敏感度、大面積生產與全球供應重要性，便可能成為調適投資的優先對象。相關措施可能包括改善灌溉效率、調整播種期、推廣耐旱品種、增加土壤保水能力，以及建立更精細的乾旱預警與農業保險。
+
+不過，不同熱點需要的策略不一定相同。雨養產區可能更需要土壤管理、品種與氣象服務；高度灌溉區則可能優先處理用水效率、地下水與跨部門水資源分配。若只依全球平均風險制定單一政策，容易忽略地方差異，也可能把資源投入到效果有限的措施。
+
+【生產損失也會沿著貿易與供應鏈擴散】
+
+主要作物產區受旱，不只影響當地農民。玉米、大豆、小麥與水稻廣泛進入國際貿易、畜牧飼料、加工食品與能源市場，區域減產可能進一步造成價格與供應波動。當多個重要產區同時出現乾旱，其他地區也未必能迅速補足缺口。作物生產具有季節性，新增面積、調整品種與物流配置都需要時間。
+
+因此，乾旱熱點不只是農業氣候問題，也與糧食進口依賴、飼料成本及國家糧食安全有關。掌握哪些地區最容易發生大規模損失，有助於政府與企業評估採購來源是否過度集中，以及是否需要建立替代供應與庫存。
+
+【乾旱風險的核心，在於哪裡受損、損失多少】
+
+這項研究不只問哪些地方會乾旱，而是進一步比較不同作物與生產方式的敏感度，以及乾旱可能造成多少生產損失。結果再次顯示，雨養農業對氣候波動較敏感，灌溉則能提供一定緩衝，但效果仍受水資源條件限制。真正需要優先處理的，是乾旱風險、作物敏感度與重要生產區高度重疊的地方。
+
+面對氣候變遷，農業調適不能只依單一作物或單一國家的平均結果。將作物、生產方式與空間位置一起分析，才能更準確找出哪些地區的乾旱，不只是地方減產，也可能進一步影響全球糧食供應。
+</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Global hotspots where drought poses the greatest threat to crop production mapped<br>原始網址：<a href="https://phys.org/news/2026-07-global-hotspots-drought-poses-greatest.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-07-global-hotspots-drought-poses-greatest.html</a><br>發布日期：2026-07-28</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

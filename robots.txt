@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /search/
+Sitemap: https://clhuangtarm-lab.github.io/agri-tech-observatory/sitemap.xml

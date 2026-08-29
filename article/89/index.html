@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>連作障礙 先判斷原因再選方法 - 農業科技觀測站</title>
+<meta name="description" content="說明連作障礙的發生機制，並介紹以耕作方式（非藥劑）進行防治的基本做法，屬現場實用農藥基礎知識系列文章上篇。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/89/">
+<meta property="og:title" content="連作障礙 先判斷原因再選方法 - 農業科技觀測站">
+<meta property="og:description" content="說明連作障礙的發生機制，並介紹以耕作方式（非藥劑）進行防治的基本做法，屬現場實用農藥基礎知識系列文章上篇。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/89/">
+<meta property="og:image" content="https://i.ibb.co/KpHHRNNj/Chat-GPT-Image-2026-8-22-01-43-21.png">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "連作障礙 先判斷原因再選方法", "description": "說明連作障礙的發生機制，並介紹以耕作方式（非藥劑）進行防治的基本做法，屬現場實用農藥基礎知識系列文章上篇。", "datePublished": "2026-08-22", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/89/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://i.ibb.co/KpHHRNNj/Chat-GPT-Image-2026-8-22-01-43-21.png"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>連作障礙 先判斷原因再選方法</h1><div class="meta"><span>發布日 2026-08-22</span><span>原文語言：日文</span><span>來源機構：JAcom 農業協同組合新聞</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/japan/">日本</a></div><a href="https://i.ibb.co/KpHHRNNj/Chat-GPT-Image-2026-8-22-01-43-21.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/KpHHRNNj/Chat-GPT-Image-2026-8-22-01-43-21.png" alt="連作障礙 先判斷原因再選方法" loading="lazy" referrerpolicy="no-referrer"></a><p>在同一塊田地長期種植相同或近緣作物，可能使產量下降、品質變差，甚至出現大面積萎凋或死亡。不過，連作障礙並非只有一種原因，土壤消毒也不是單一處理方法。
+
+日本農業協同組合新聞整理連作障礙的成因，以及耕種、物理、生物與化學防治的特性。核心原則是先確認問題來源，再選擇適合的處理方式，而不是看到植株生育不良便全面施藥。
+
+【連作障礙主要有兩類原因】
+
+第一類是連續種植特定作物後，根部釋出的他感作用物質逐漸累積，進而抑制作物生長。
+
+第二類則是特定土壤病原菌或害蟲持續增加。相同作物一再出現在田間，適合感染該作物的病原菌、線蟲或其他害蟲便可能逐漸取得優勢，使土壤中的病蟲害密度升高。
+
+兩類問題所需的處理方法並不相同。即使都是土壤病害，不同病原菌、線蟲及病毒適用的防治方式也有差異。原文以病毒病為例，指出不能直接套用一般土壤消毒劑的思維，可能需要改採熱處理或抗病品種等方法。
+
+因此，處理連作障礙前，應先釐清作物症狀、病原或害蟲種類，以及田間發生範圍，避免使用與問題不相符的措施。
+
+【輪作與土壤管理，先降低病蟲害密度】
+
+耕種防治的基本方向，是避免特定病蟲害在田間持續累積。可採取的方法包括改善土壤、輪作、選用抗病品種及淹水處理等。
+
+輪作是讓不同科別的作物依序進入同一塊田地，減少特定病原菌或害蟲持續取得寄主的機會。不過，產區若要在不降低生產量的情況下輪作，通常需要多塊適合耕種的田區，土地面積及產銷安排都可能形成限制。
+
+即使後續仍須使用藥劑，先透過耕種防治降低病蟲害密度，也有助於提升處理效果，減少不必要的化學投入。
+
+【太陽熱、還原消毒與蒸汽各有限制】
+
+太陽熱消毒是在土壤水分充足的情況下，以透明塑膠布覆蓋地面，利用日照提高土壤溫度，抑制病原菌、線蟲及雜草。這種方法較適合高溫、日照充足且能密閉的設施環境。
+
+實際效果不能只看地表最高溫，病原種類、維持時間、處理深度、土壤水分及覆蓋狀況，都會影響消毒效果。農研機構的太陽熱土壤消毒資料也將覆膜與土壤升溫列為主要處理原理。
+
+土壤還原消毒則是在土壤中加入米糠、麩皮等容易分解的有機物，充分灌水後覆蓋。微生物分解有機物時會消耗氧氣，使土壤形成低氧及還原環境；有機酸、高溫及微生物間的競爭，也可能共同抑制病原菌。
+
+這種方法可在低於單純太陽熱消毒的溫度下發揮作用，但必須注意灌水條件、處理深度、有機資材用量及氣味。鄰近住宅的農地尤其需要評估異味影響。農研機構技術報告也指出，處理深度、資材投入及作業負擔是實際應用時的重要限制。
+
+蒸汽或熱水消毒則利用設備直接提高土溫，效果較不受日照影響，但需要鍋爐及均勻注入設備，也須評估燃料成本、設備投資及二氧化碳排放，比較適合區域共同使用。
+
+【必須提早建立生物防治】
+
+部分土壤病原菌可利用微生物製劑防治。其作用可能包括競爭養分與生存空間、在根部或植體表面先行定殖，或直接抑制病原菌生長。
+
+由於有益微生物通常需要比病原菌更早建立族群，使用時機多半在發病前或發生初期。若病原菌已大量增殖，再施用生物製劑，效果可能受到限制。
+
+生物防治也不是對所有土壤病害都有效，仍須確認菌株、作物、病害及施用方法是否相符。
+
+【化學處理須依目標與安全條件選擇】
+
+土壤燻蒸劑的防治範圍較廣，但部分產品具有揮發性、刺激性或其他作業風險。施用時必須考慮作業人員、鄰近居民及周邊環境，並確實遵守覆蓋、施用量、等待期及安全防護等規定。大面積施用時，使用專用機械也有助於降低人工作業負擔及接觸風險。
+
+土壤處理用粒劑、粉劑或液劑通常不必像燻蒸劑一樣覆蓋，施用較簡便，但適用的病蟲害可能較少，效果也取決於藥劑能否與土壤中的目標病蟲害充分接觸，因此均勻施用與混拌相當重要。
+
+
+【重點不是全面停用，而是減少不必要的處理】
+
+連作障礙的管理，不是從化學防治與非化學防治之間擇一，而是依田間問題建立處理順序：先診斷原因，再以輪作、抗病品種及土壤管理降低病蟲害密度；條件適合時加入太陽熱、還原消毒或生物防治，最後再針對無法取代的問題選擇適用藥劑，如此才能在維持產量與品質的同時，降低不必要的藥劑投入及環境負荷。
+
+🔗資料來源
+上篇｜連作障礙的形成與耕種防治
+https://www.jacom.or.jp/articles/9VAnxTIA948bi6ePpSptm
+
+下篇｜生物農藥與化學防治
+https://www.jacom.or.jp/articles/_AD76EcOCMNISHu5wO_bK
+</p><div class="src"><strong>原始資料來源</strong><br>原文標題：連作障害を防ぐ土壌消毒のポイント（上）連作障害の仕組みと耕種的防除【現場で役立つ農薬の基礎知識2026】<br>原始網址：<a href="https://www.jacom.or.jp/articles/9VAnxTIA948bi6ePpSptm" target="_blank" rel="noopener nofollow">https://www.jacom.or.jp/articles/9VAnxTIA948bi6ePpSptm</a><br>發布日期：</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

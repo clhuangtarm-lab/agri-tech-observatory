@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>日本新創公司與北海道政府合作，建置AI伐採狀況判釋模型示範計畫 - 農業科技觀測站</title>
+<meta name="description" content="日本新創公司Archeda與北海道政府簽約，於令和8年度執行「伐採狀況把握AI模型建置實證」委託業務，以衛星資料結合AI偵測伐採狀況，協助廣域森林監測與森林行政作業效率化。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/109/">
+<meta property="og:title" content="日本新創公司與北海道政府合作，建置AI伐採狀況判釋模型示範計畫 - 農業科技觀測站">
+<meta property="og:description" content="日本新創公司Archeda與北海道政府簽約，於令和8年度執行「伐採狀況把握AI模型建置實證」委託業務，以衛星資料結合AI偵測伐採狀況，協助廣域森林監測與森林行政作業效率化。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/109/">
+<meta name="twitter:card" content="summary">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{white-space:pre-wrap;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "日本新創公司與北海道政府合作，建置AI伐採狀況判釋模型示範計畫", "description": "日本新創公司Archeda與北海道政府簽約，於令和8年度執行「伐採狀況把握AI模型建置實證」委託業務，以衛星資料結合AI偵測伐採狀況，協助廣域森林監測與森林行政作業效率化。", "datePublished": "2026-07-18", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/109/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>日本新創公司與北海道政府合作，建置AI伐採狀況判釋模型示範計畫</h1><div class="meta"><span>發布日 2026-07-18</span><span>原文語言：日文</span><span>來源機構：日本農業新聞</span><a class="tag" href="../../topic/d/">森林木竹與林下經濟</a><a class="tag" href="../../country/japan/">日本</a></div><p>北海道森林面積廣大，地方政府若要逐一前往現場確認伐採情形，需要投入大量人力與時間。隨著林業從業人口減少、地方政府林務人員有限，如何持續掌握伐採進度與範圍，已成為森林行政的重要課題。北海道政府2026年度啟動「伐採狀況掌握AI模型建置實證」，由日本新創公司Archeda承接。這項計畫將結合衛星影像與人工智慧，辨識北海道境內可能發生伐採的區域，再提供林務人員作為現地查核與行政判斷的參考。
+
+【衛星影像先篩選，現勘再確認】
+
+衛星能以固定頻率拍攝大範圍地表。若搭配不同時間的影像，便能比對森林覆蓋與地表變化，找出疑似伐採區域。本案的AI模型將分析北海道境內的時序衛星資料，辨識林地中近期出現明顯變化的位置。行政人員可依分析結果安排後續查核，優先處理變化較明顯或風險較高的區域。由於衛星影像可能受到雲層、積雪、季節變化與地形影響，AI也可能將整地、風倒木或其他地表變化判定為伐採。因此，由模型扮演篩選工具，協助地方政府便能將有限人力集中在需要進一步確認的區域，並提高伐採狀況的掌握頻率。
+
+【以林班單位追蹤伐採時間與位置】
+
+Archeda表示，既有森林分析系統能以林小班等管理單位，追蹤不同時間的衛星影像，辨識伐採發生的位置。這項功能可協助地方政府比對伐採申報內容，確認實際作業位置、範圍與時間是否一致。若系統發現申報區域外出現地表變化，行政人員也能進一步查核。除了伐採辨識，Archeda目前提供的森林分析項目還包括：
+
+* 造林與更新狀況監測
+* 樹高與樹冠辨識
+* 森林資源量推估
+* 無人機現地量測
+* 申請、申報及施業紀錄的地圖化管理
+其中，森林管理雲端平台「森ノート」可整合施業紀錄、申請資料與衛星分析結果，讓管理人員直接在地圖上查閱不同林區資訊。
+
+【北海道成為大範圍森林監測的測試場域】
+
+北海道是日本森林面積最大的地區之一，林地分布廣，地形與氣候條件差異也大。傳統森林管理高度依賴現地巡查。這種方式能取得直接資訊，但在人力有限、林區範圍廣大的情況下，很難維持高頻率與完整覆蓋。但對森林行政而言，重要的不是單次偵測結果，而是能否建立穩定更新、可追溯且能與申報制度銜接的資料基礎。
+對衛星與AI監測而言，北海道能提供足夠規模的測試環境，也能檢驗模型面對積雪、雲層及不同林型時的辨識能力。本次實證的重點不只在於AI能否辨識影像，還包括分析結果能否配合行政流程。當地方政府持續保存不同年份的伐採、造林與森林資源資訊，便能進一步分析更新進度、施業分布及森林變化趨勢。
+
+</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Archeda、北海道の令和8年度「伐採状況把握AIモデル構築実証」委託業務の契約を締結 株式会社Archeda 2026年7月16日 掲載<br>原始網址：<a href="https://www.agrinews.co.jp/news/prtimes/393980" target="_blank" rel="noopener nofollow">https://www.agrinews.co.jp/news/prtimes/393980</a><br>發布日期：2026-07-16</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>
