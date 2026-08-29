@@ -4,6 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>農業科技觀測站</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-DNWDFFSY3S', { send_page_view: false });
+</script>
 </head>
 <body>
 <style>
@@ -117,6 +124,16 @@ function article(id){
     原始網址：<a href="${esc(a.url)}" target="_blank" rel="noopener nofollow">${esc(a.url)}</a><br>
     發布日期：${esc(a.published_date)}</div></article>`;
 }
+function trackPageView(){
+  if(typeof gtag !== 'function') return;
+  const heading = document.querySelector('#app h1');
+  const title = heading ? heading.textContent.trim() : '農業科技觀測站';
+  gtag('event', 'page_view', {
+    page_title: title,
+    page_location: window.location.href,
+    article_route: window.location.hash || '#/'
+  });
+}
 function render(){
   const h = location.hash || '#/';
   const app = document.getElementById('app');
@@ -130,6 +147,7 @@ function render(){
   else if(h==='#/topics') out = topics();
   else out = home();
   app.innerHTML = out; window.scrollTo(0,0);
+  trackPageView();
 }
 function doSearch(e){ e.preventDefault(); go('#/search?q='+encodeURIComponent(document.getElementById('q').value.trim())); return false; }
 window.addEventListener('hashchange', render);
