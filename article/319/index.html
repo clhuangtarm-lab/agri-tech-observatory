@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具 - 農業科技觀測站</title>
+<meta name="description" content="澳洲CSIRO嘗試用無人機LiDAR快速估算牧草量，再結合多光譜與雷達判斷活草及含水狀態。研究希望補足衛星覆蓋廣但精度有限、人工量測精準卻耗時的落差；目前仍在研究站校正與跨地區測試階段。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/319/">
+<meta property="og:title" content="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具 - 農業科技觀測站">
+<meta property="og:description" content="澳洲CSIRO嘗試用無人機LiDAR快速估算牧草量，再結合多光譜與雷達判斷活草及含水狀態。研究希望補足衛星覆蓋廣但精度有限、人工量測精準卻耗時的落差；目前仍在研究站校正與跨地區測試階段。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/319/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具", "description": "澳洲CSIRO嘗試用無人機LiDAR快速估算牧草量，再結合多光譜與雷達判斷活草及含水狀態。研究希望補足衛星覆蓋廣但精度有限、人工量測精準卻耗時的落差；目前仍在研究站校正與跨地區測試階段。", "datePublished": "2026-09-26", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/319/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具</h1><div class="meta"><span>發布日 2026-09-26</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/australia/">澳洲</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" alt="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具" loading="lazy" referrerpolicy="no-referrer"></a><p>放牧管理最基本的一個問題，是眼前到底有多少草真的可以被牛吃掉。牧草量估得太高，容易過度放牧；估得太低，又可能沒有充分利用田區。</p><p>澳洲CSIRO正在開發一套牧草生物量快速量測工具，希望補足現有兩種方法之間的缺口：衛星看得廣，但資訊較粗；人工量測較準，卻很耗人力。</p><p>【衛星和人工量測之間，少了一個中間尺度】</p><p>衛星常用NDVI等植生指標估算綠色植被量，可以快速看完整個牧場，但草冠太密時指標容易飽和，而且缺少植物高度資訊。</p><p>另一端是rising plate meter或人工割草秤重。單點可以很準，但要代表整個牧場，就得做大量取樣。</p><p>CSIRO和Meat &amp; Livestock Australia因此想找一個方法：既有接近衛星的覆蓋範圍，又保留接近人工量測的三維細節。</p><p>【Ray cloud不只記錄雷射打到哪裡，也記錄怎麼穿過去】</p><p>研究團隊把原本用於葡萄園的LiDAR工具RayCloudTools改到牧草。</p><p>一般LiDAR常看到的是point cloud，也就是每一道雷射最後反射回來的位置；Ray cloud則連雷射從發射到反射之間的完整路徑都保留下來。這使系統不只知道「哪裡有東西」，還能估計空間是比較密、還是比較疏。</p><p>在葡萄園裡，這套方法可以用來分析樹冠密度。轉到牧草後，理論上也能把草地拆成很多三維小空間，估算整片田的植體量。</p><p>【牧草比葡萄更難，因為草和地面連在一起】</p><p>葡萄藤和地面之間通常有明顯空隙，系統比較容易分出地面和植體；牧草則直接從地面長起來，兩者幾乎連成一片。</p><p>因此，CSIRO目前最困難的技術問題之一，就是正確找出地面。研究人員在Boorowa研究站利用割草與放牧，刻意製造不同牧草量，再用人工一平方公尺一平方公尺割草、秤重，拿來校正LiDAR模型。</p><p>還有一個更實際的問題：到底要量全部牧草，還是只量牛真正吃得到的部分？很多放牧系統會把大約離地5公分視為一個實務參考，因此研究團隊也在和產業討論，是否應該只估算這個高度以上的「可利用牧草」。</p><p>【LiDAR知道有多少草，卻不知道草是不是活的】</p><p>對放牧來說，綠色活草和站立枯草不是同一件事。LiDAR可以量到植體結構，但單靠雷射無法知道這些植體是綠草還是乾草。</p><p>研究團隊因此再加入RGB、多光譜相機和雷達。RGB與多光譜可以讀顏色與植被狀態，雷達則對含水量敏感，希望利用多種訊號把活草和乾枯植體分開。</p><p>【無人機和地面掃描都在測，還沒到商用階段】</p><p>目前Boorowa同時測試無人機搭載系統與地面掃描車，比較精度、操作性與覆蓋效率。研究團隊預期無人機較容易放大到商業牧場，但還需要實際驗證。</p><p>下一階段將到Townsville附近超過1公尺高的叢生牧草、Armidale以及商業牧場測試，確認模型能不能跨不同草型工作。</p><p>原文也引用另一項牧草型乳牛研究：如果牧草量估算的平均誤差能降到15％，農場獲利可能提高11–15％。這個數字是既有研究的經濟估算，不是CSIRO這個LiDAR計畫目前已達成的成果。</p><p>現階段最重要的仍是把「量得廣、量得準、分得出活草」三件事整合起來，再確認不同牧場都能穩定使用。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：New tool aims to deliver graziers a faster, more accurate read on exactly how much feed is in front of their cattle<br>原始網址：<a href="https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html</a><br>發布日期：2026-09-22</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

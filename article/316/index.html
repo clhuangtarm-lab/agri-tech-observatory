@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>機器學習從5,000萬種化合物找出蜜蜂驅避物：降低農藥暴露的新路徑 - 農業科技觀測站</title>
+<meta name="description" content="研究團隊讓機器學習先從超過5,000萬種化合物中縮小範圍，再以蜜蜂行為與田間試驗驗證候選物。7種受測化合物都讓自由採食蜜蜂出現避開反應，但目前仍屬候選物研究，尚未成為可直接施用的農藥配方。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/316/">
+<meta property="og:title" content="機器學習從5,000萬種化合物找出蜜蜂驅避物：降低農藥暴露的新路徑 - 農業科技觀測站">
+<meta property="og:description" content="研究團隊讓機器學習先從超過5,000萬種化合物中縮小範圍，再以蜜蜂行為與田間試驗驗證候選物。7種受測化合物都讓自由採食蜜蜂出現避開反應，但目前仍屬候選物研究，尚未成為可直接施用的農藥配方。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/316/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/316.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "機器學習從5,000萬種化合物找出蜜蜂驅避物：降低農藥暴露的新路徑", "description": "研究團隊讓機器學習先從超過5,000萬種化合物中縮小範圍，再以蜜蜂行為與田間試驗驗證候選物。7種受測化合物都讓自由採食蜜蜂出現避開反應，但目前仍屬候選物研究，尚未成為可直接施用的農藥配方。", "datePublished": "2026-09-26", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/316/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/316.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>機器學習從5,000萬種化合物找出蜜蜂驅避物：降低農藥暴露的新路徑</h1><div class="meta"><span>發布日 2026-09-26</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/us/">美國</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/316.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/316.webp" alt="機器學習從5,000萬種化合物找出蜜蜂驅避物：降低農藥暴露的新路徑" loading="lazy" referrerpolicy="no-referrer"></a><p>蜜蜂具有超過200種嗅覺受體，會利用氣味尋找花源，也因此能辨識大量揮發性化合物。要從數千萬種分子中找出「會讓蜜蜂主動避開、又不傷害蜜蜂」的氣味，單靠逐一實驗篩選成本很高。</p><p>加州大學河濱分校研究團隊因此先用機器學習縮小候選範圍，再交由蜜蜂進行行為驗證。研究成果刊登於eLife。</p><p>【模型不是只看化學結構，而是反覆加入行為資料】</p><p>研究團隊先把氣味分子的化學結構，以及過去累積的蜜蜂行為反應資料放入模型。之後再加入實驗室中新取得的蜜蜂與果蠅行為資料，反覆修正模型，讓預測更接近昆蟲實際的嗅覺反應。</p><p>完成優化後，系統一次篩選超過5,000萬種化合物，最後找出約130種被預測具有較強蜜蜂驅避潛力的候選物。這裡的AI主要不是取代生物試驗，而是把原本巨大的搜尋範圍縮小，讓實驗資源集中在較值得測試的化合物。</p><p>【7種候選物通過自由飛行蜜蜂的田間測試】</p><p>排名較高的候選物先接受實驗室測試，蜜蜂的避開反應大致符合模型預測。研究團隊再挑出7種化合物，以自由飛行、正常採食的蜜蜂進行田間試驗。</p><p>結果顯示，7種化合物都能讓蜜蜂避開放置候選氣味的蜂巢，研究中也沒有觀察到對蜜蜂造成傷害。這一步很重要，因為它把結果從受控實驗室推到較接近自然飛行行為的環境。</p><p>不過，這裡驗證的是「蜜蜂會不會避開這些氣味」，並不是已經把候選物加到農藥裡，也不是在實際施藥作物上證明蜜蜂暴露量下降。</p><p>【真正的農業應用，是把驅避行為和施藥時間接在一起】</p><p>研究團隊提出的農業情境，是在施藥時利用驅避氣味，讓蜜蜂暫時遠離有風險的區域。這和降低農藥毒性是不同策略：前者減少接觸機會，後者改變藥劑本身危害。</p><p>如果未來能把驅避物和農藥配方、施藥時機及作物授粉期整合，就可能成為保護授粉昆蟲的一種補充工具。研究者也提到其他可能用途，例如公共空間避免蜂群築巢，或某些不希望授粉的作物情境。</p><p>【從候選氣味到可用配方，還要做另一輪驗證】</p><p>目前尚未完整測試不同作物、不同農藥、施用濃度、驅避持續時間與其他授粉昆蟲的反應。若在需要授粉的時段長時間驅避蜜蜂，也可能影響結果率，因此實際使用必須把授粉需求和施藥風險一起考慮。</p><p>研究另揭露，部分作者持有Sensorygen與Remote Epigenetics股權，多名作者也是相關化合物專利申請的發明人。後續若進入產品化，仍需要獨立團隊與實際農業場域驗證。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Machine learning helps identify chemicals that repel honey bees from pesticides<br>原始網址：<a href="https://phys.org/news/2026-09-machine-chemicals-repel-honey-bees.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-09-machine-chemicals-repel-honey-bees.html</a><br>發布日期：2026-09-24</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>
