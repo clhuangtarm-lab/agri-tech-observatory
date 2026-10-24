@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>篩選1.5萬種固碳酵素變體，尋找減少氧氣反應的方法 - 農業科技觀測站</title>
+<meta name="description" content="瑞典皇家理工學院測試約1.5萬種細菌Rubisco變體，找到兩種較少與氧氣反應、仍保有二氧化碳處理能力的候選酵素。研究也顯示有利突變合併後常失效，團隊正進一步於植物細胞測試。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/430/">
+<meta property="og:title" content="篩選1.5萬種固碳酵素變體，尋找減少氧氣反應的方法 - 農業科技觀測站">
+<meta property="og:description" content="瑞典皇家理工學院測試約1.5萬種細菌Rubisco變體，找到兩種較少與氧氣反應、仍保有二氧化碳處理能力的候選酵素。研究也顯示有利突變合併後常失效，團隊正進一步於植物細胞測試。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/430/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/430.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "篩選1.5萬種固碳酵素變體，尋找減少氧氣反應的方法", "description": "瑞典皇家理工學院測試約1.5萬種細菌Rubisco變體，找到兩種較少與氧氣反應、仍保有二氧化碳處理能力的候選酵素。研究也顯示有利突變合併後常失效，團隊正進一步於植物細胞測試。", "datePublished": "2026-10-24", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/430/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/430.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>篩選1.5萬種固碳酵素變體，尋找減少氧氣反應的方法</h1><div class="meta"><span>發布日 2026-10-24</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/b/">氣候韌性與風險管理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/430.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/430.webp" alt="篩選1.5萬種固碳酵素變體，尋找減少氧氣反應的方法" loading="lazy" referrerpolicy="no-referrer"></a><p>Rubisco 是光合作用中固定二氧化碳的重要酵素，能把二氧化碳納入生物後續製造糖分及生長所需的物質。不過，它的反應速度不快，有時還會與氧氣反應，使植物額外耗費能量處理產物。瑞典皇家理工學院研究團隊因此嘗試找出：能否保留較快的二氧化碳處理能力，同時降低與氧氣反應的機會。</p><p>【先從細菌酵素尋找規律】</p><p>團隊製作約1.5萬種經基因改變的細菌 Rubisco，為每種變體附上短 DNA 標籤，再以高通量平台同時追蹤大量候選酵素。研究者比較單一突變及多個突變組合，觀察它們如何影響細菌生長。</p><p>研究選用第二型細菌 Rubisco，是因為其結構較適合大量製作與測試。有些細菌 Rubisco 處理二氧化碳的速度比植物酵素快，卻也更容易與氧氣反應。團隊希望從大量有效及無效的變異中，辨認酵素結構與反應選擇性的關係。</p><p>【單獨有效的突變，合併後未必有效】</p><p>篩選找到兩種較有潛力的變體：它們與氧氣的反應較少，同時保有一定的二氧化碳處理能力。不過，兩者的整體固碳效率各有取捨；單獨測試時有利的突變，合併後也常失去原有效果。</p><p>研究者另測試數種預測突變效果的電腦模型，發現模型對單一突變的判斷，比對突變組合可靠。這批實驗資料可協助模型學習較複雜的酵素反應。團隊已開始在植物細胞測試新酵素；目前直接取得的成果，仍是細菌 Rubisco 的篩選結果與改造線索。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：With climate-resilient crops in mind, study tackles flaw in photosynthesis<br>原始網址：<a href="https://phys.org/news/2026-10-climate-resilient-crops-mind-tackles.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-10-climate-resilient-crops-mind-tackles.html</a><br>發布日期：2026-10-22</div></article></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>
