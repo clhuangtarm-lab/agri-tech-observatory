@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具 - 農業科技觀測站</title>
+<title>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具｜農業科技觀測站</title>
 <meta name="description" content="澳洲CSIRO嘗試用無人機LiDAR快速估算牧草量，再結合多光譜與雷達判斷活草及含水狀態。研究希望補足衛星覆蓋廣但精度有限、人工量測精準卻耗時的落差；目前仍在研究站校正與跨地區測試階段。">
 <link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/319/">
-<meta property="og:title" content="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具 - 農業科技觀測站">
+<meta property="og:title" content="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具｜農業科技觀測站">
 <meta property="og:description" content="澳洲CSIRO嘗試用無人機LiDAR快速估算牧草量，再結合多光譜與雷達判斷活草及含水狀態。研究希望補足衛星覆蓋廣但精度有限、人工量測精準卻耗時的落差；目前仍在研究站校正與跨地區測試階段。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="農業科技觀測站">
@@ -59,6 +59,35 @@ h2{font-size:19px;margin:26px 0 10px;}
 .article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
 .src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
 .empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
 footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 </style>
@@ -80,7 +109,16 @@ footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12
     <button>搜尋</button>
   </form>
 </div></header>
-<main><article class="article"><h1>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具</h1><div class="meta"><span>發布日 2026-09-26</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/australia/">澳洲</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" alt="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具" loading="lazy" referrerpolicy="no-referrer"></a><p>放牧管理最基本的一個問題，是眼前到底有多少草真的可以被牛吃掉。牧草量估得太高，容易過度放牧；估得太低，又可能沒有充分利用田區。</p><p>澳洲CSIRO正在開發一套牧草生物量快速量測工具，希望補足現有兩種方法之間的缺口：衛星看得廣，但資訊較粗；人工量測較準，卻很耗人力。</p><p>【衛星和人工量測之間，少了一個中間尺度】</p><p>衛星常用NDVI等植生指標估算綠色植被量，可以快速看完整個牧場，但草冠太密時指標容易飽和，而且缺少植物高度資訊。</p><p>另一端是rising plate meter或人工割草秤重。單點可以很準，但要代表整個牧場，就得做大量取樣。</p><p>CSIRO和Meat &amp; Livestock Australia因此想找一個方法：既有接近衛星的覆蓋範圍，又保留接近人工量測的三維細節。</p><p>【Ray cloud不只記錄雷射打到哪裡，也記錄怎麼穿過去】</p><p>研究團隊把原本用於葡萄園的LiDAR工具RayCloudTools改到牧草。</p><p>一般LiDAR常看到的是point cloud，也就是每一道雷射最後反射回來的位置；Ray cloud則連雷射從發射到反射之間的完整路徑都保留下來。這使系統不只知道「哪裡有東西」，還能估計空間是比較密、還是比較疏。</p><p>在葡萄園裡，這套方法可以用來分析樹冠密度。轉到牧草後，理論上也能把草地拆成很多三維小空間，估算整片田的植體量。</p><p>【牧草比葡萄更難，因為草和地面連在一起】</p><p>葡萄藤和地面之間通常有明顯空隙，系統比較容易分出地面和植體；牧草則直接從地面長起來，兩者幾乎連成一片。</p><p>因此，CSIRO目前最困難的技術問題之一，就是正確找出地面。研究人員在Boorowa研究站利用割草與放牧，刻意製造不同牧草量，再用人工一平方公尺一平方公尺割草、秤重，拿來校正LiDAR模型。</p><p>還有一個更實際的問題：到底要量全部牧草，還是只量牛真正吃得到的部分？很多放牧系統會把大約離地5公分視為一個實務參考，因此研究團隊也在和產業討論，是否應該只估算這個高度以上的「可利用牧草」。</p><p>【LiDAR知道有多少草，卻不知道草是不是活的】</p><p>對放牧來說，綠色活草和站立枯草不是同一件事。LiDAR可以量到植體結構，但單靠雷射無法知道這些植體是綠草還是乾草。</p><p>研究團隊因此再加入RGB、多光譜相機和雷達。RGB與多光譜可以讀顏色與植被狀態，雷達則對含水量敏感，希望利用多種訊號把活草和乾枯植體分開。</p><p>【無人機和地面掃描都在測，還沒到商用階段】</p><p>目前Boorowa同時測試無人機搭載系統與地面掃描車，比較精度、操作性與覆蓋效率。研究團隊預期無人機較容易放大到商業牧場，但還需要實際驗證。</p><p>下一階段將到Townsville附近超過1公尺高的叢生牧草、Armidale以及商業牧場測試，確認模型能不能跨不同草型工作。</p><p>原文也引用另一項牧草型乳牛研究：如果牧草量估算的平均誤差能降到15％，農場獲利可能提高11–15％。這個數字是既有研究的經濟估算，不是CSIRO這個LiDAR計畫目前已達成的成果。</p><p>現階段最重要的仍是把「量得廣、量得準、分得出活草」三件事整合起來，再確認不同牧場都能穩定使用。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：New tool aims to deliver graziers a faster, more accurate read on exactly how much feed is in front of their cattle<br>原始網址：<a href="https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html</a><br>發布日期：2026-09-22</div></article></main>
+<main><article class="article"><h1>無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具</h1><div class="meta"><span>發布日 2026-09-26</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/australia/">澳洲</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/319.webp" alt="無人機LiDAR能更快量牧草？CSIRO開發牧草生物量快速估算工具" loading="lazy" referrerpolicy="no-referrer"></a><p>放牧管理最基本的一個問題，是眼前到底有多少草真的可以被牛吃掉。牧草量估得太高，容易過度放牧；估得太低，又可能沒有充分利用田區。</p><p>澳洲CSIRO正在開發一套牧草生物量快速量測工具，希望補足現有兩種方法之間的缺口：衛星看得廣，但資訊較粗；人工量測較準，卻很耗人力。</p><p>【衛星和人工量測之間，少了一個中間尺度】</p><p>衛星常用NDVI等植生指標估算綠色植被量，可以快速看完整個牧場，但草冠太密時指標容易飽和，而且缺少植物高度資訊。</p><p>另一端是rising plate meter或人工割草秤重。單點可以很準，但要代表整個牧場，就得做大量取樣。</p><p>CSIRO和Meat &amp; Livestock Australia因此想找一個方法：既有接近衛星的覆蓋範圍，又保留接近人工量測的三維細節。</p><p>【Ray cloud不只記錄雷射打到哪裡，也記錄怎麼穿過去】</p><p>研究團隊把原本用於葡萄園的LiDAR工具RayCloudTools改到牧草。</p><p>一般LiDAR常看到的是point cloud，也就是每一道雷射最後反射回來的位置；Ray cloud則連雷射從發射到反射之間的完整路徑都保留下來。這使系統不只知道「哪裡有東西」，還能估計空間是比較密、還是比較疏。</p><p>在葡萄園裡，這套方法可以用來分析樹冠密度。轉到牧草後，理論上也能把草地拆成很多三維小空間，估算整片田的植體量。</p><p>【牧草比葡萄更難，因為草和地面連在一起】</p><p>葡萄藤和地面之間通常有明顯空隙，系統比較容易分出地面和植體；牧草則直接從地面長起來，兩者幾乎連成一片。</p><p>因此，CSIRO目前最困難的技術問題之一，就是正確找出地面。研究人員在Boorowa研究站利用割草與放牧，刻意製造不同牧草量，再用人工一平方公尺一平方公尺割草、秤重，拿來校正LiDAR模型。</p><p>還有一個更實際的問題：到底要量全部牧草，還是只量牛真正吃得到的部分？很多放牧系統會把大約離地5公分視為一個實務參考，因此研究團隊也在和產業討論，是否應該只估算這個高度以上的「可利用牧草」。</p><p>【LiDAR知道有多少草，卻不知道草是不是活的】</p><p>對放牧來說，綠色活草和站立枯草不是同一件事。LiDAR可以量到植體結構，但單靠雷射無法知道這些植體是綠草還是乾草。</p><p>研究團隊因此再加入RGB、多光譜相機和雷達。RGB與多光譜可以讀顏色與植被狀態，雷達則對含水量敏感，希望利用多種訊號把活草和乾枯植體分開。</p><p>【無人機和地面掃描都在測，還沒到商用階段】</p><p>目前Boorowa同時測試無人機搭載系統與地面掃描車，比較精度、操作性與覆蓋效率。研究團隊預期無人機較容易放大到商業牧場，但還需要實際驗證。</p><p>下一階段將到Townsville附近超過1公尺高的叢生牧草、Armidale以及商業牧場測試，確認模型能不能跨不同草型工作。</p><p>原文也引用另一項牧草型乳牛研究：如果牧草量估算的平均誤差能降到15％，農場獲利可能提高11–15％。這個數字是既有研究的經濟估算，不是CSIRO這個LiDAR計畫目前已達成的成果。</p><p>現階段最重要的仍是把「量得廣、量得準、分得出活草」三件事整合起來，再確認不同牧場都能穩定使用。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：New tool aims to deliver graziers a faster, more accurate read on exactly how much feed is in front of their cattle<br>原始網址：<a href="https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-09-tool-aims-graziers-faster-accurate.html</a><br>發布日期：2026-09-22</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../453/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="453" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/453.webp" width="1672" height="941" alt="FSR500噴灑機器人，以輕型機體與自行維修設計進行田間測試" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../453/" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="453" data-ga-position="1" data-ga-relation-type="same_topic">FSR500噴灑機器人，以輕型機體與自行維修設計進行田間測試</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../434/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="434" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/434.webp" width="1672" height="941" alt="AI辨識雜草後再處理，雷射、機械與點噴各有適用條件" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../434/" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="434" data-ga-position="2" data-ga-relation-type="same_topic">AI辨識雜草後再處理，雷射、機械與點噴各有適用條件</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../436/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="436" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/436.webp" width="1672" height="941" alt="智慧農業在哪些地區划算？全球模型估計約42％耕地具經濟條件" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../436/" data-ga-event="related_article_click" data-ga-current-article-id="319" data-ga-target-article-id="436" data-ga-position="3" data-ga-relation-type="same_topic">智慧農業在哪些地區划算？全球模型估計約42％耕地具經濟條件</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../318/" data-ga-event="article_navigation_click" data-ga-current-article-id="319" data-ga-target-article-id="318" data-ga-direction="previous" title="感測灌溉如何同時省水與穩定品質？義大利番茄、鮮食葡萄兩年田間試驗"><span class="dir">← 上一篇</span><span class="ttl">感測灌溉如何同時省水與穩定品質？義大利番茄、鮮食葡萄兩年田間…</span></a><a class="next" href="../321/" data-ga-event="article_navigation_click" data-ga-current-article-id="319" data-ga-target-article-id="321" data-ga-direction="next" title="低成本土壤pH感測器可連續監測數月：不同土壤條件下仍維持穩定"><span class="dir">下一篇 →</span><span class="ttl">低成本土壤pH感測器可連續監測數月：不同土壤條件下仍維持穩定</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
 <footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
 內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
 </body>

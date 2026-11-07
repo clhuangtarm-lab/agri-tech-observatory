@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>在植物細胞內分析蛋白質，看見菸草對真菌的不同反應 - 農業科技觀測站</title>
+<title>在植物細胞內分析蛋白質，看見菸草對真菌的不同反應｜農業科技觀測站</title>
 <meta name="description" content="德拉瓦大學團隊以甲醇處理植物組織，在細胞內製備蛋白質樣本，減少傳統磨碎與萃取步驟。研究比較健康菸草及接觸不同真菌的葉片，找到植物免疫與真菌致病相關的囊泡蛋白質線索。">
 <link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/389/">
-<meta property="og:title" content="在植物細胞內分析蛋白質，看見菸草對真菌的不同反應 - 農業科技觀測站">
+<meta property="og:title" content="在植物細胞內分析蛋白質，看見菸草對真菌的不同反應｜農業科技觀測站">
 <meta property="og:description" content="德拉瓦大學團隊以甲醇處理植物組織，在細胞內製備蛋白質樣本，減少傳統磨碎與萃取步驟。研究比較健康菸草及接觸不同真菌的葉片，找到植物免疫與真菌致病相關的囊泡蛋白質線索。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="農業科技觀測站">
@@ -59,6 +59,35 @@ h2{font-size:19px;margin:26px 0 10px;}
 .article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
 .src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
 .empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
 footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 </style>
@@ -80,7 +109,16 @@ footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12
     <button>搜尋</button>
   </form>
 </div></header>
-<main><article class="article"><h1>在植物細胞內分析蛋白質，看見菸草對真菌的不同反應</h1><div class="meta"><span>發布日 2026-10-18</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/389.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/389.webp" alt="在植物細胞內分析蛋白質，看見菸草對真菌的不同反應" loading="lazy" referrerpolicy="no-referrer"></a><p>研究植物病害時，除了知道葉片是否出現症狀，研究人員也希望進一步了解：感染前後，植物細胞中的哪些蛋白質發生變化？真菌與植物各自釋放哪些物質，進而影響感染或防禦？</p><p>蛋白質體學能一次分析大量蛋白質，但植物組織具有細胞壁，樣本製備並不容易。傳統做法通常先把葉片、花粉或種子等材料磨碎，再用多道化學程序萃取蛋白質；流程可能耗費數日，少量樣本中的材料也可能在處理過程中流失。</p><p>美國德拉瓦大學研究團隊在《Plant Physiology》發表一種細胞內蛋白質分析方法，改變了樣本製備的順序：先以甲醇處理組織，再於細胞內進行蛋白質消化與後續分析。</p><p>【減少萃取步驟，保留觀察細胞狀態的資訊】</p><p>甲醇處理可協助固定樣本，使研究人員在製備蛋白質時，仍保有判讀細胞原有狀態所需的資訊。團隊接著在細胞內處理蛋白質，而非一開始就將所有組織磨碎、完整萃取蛋白質後才分析。</p><p>研究人員認為，這種方式有助於在樣本量有限時，仍穩定辨識並定量大量蛋白質。對感染研究而言，研究者便能比較健康及患病組織的蛋白質組成，尋找與植物防禦或病原作用有關的變化。</p><p>【致病與無害真菌，引發不同反應路徑】</p><p>團隊以菸草葉片進行試驗，比較健康葉片，以及接觸致病或無害真菌後的葉片。真菌在植物周圍普遍存在，但只有部分會造成特定植物生病；研究人員希望透過蛋白質變化，找出植物如何辨別及回應不同真菌。</p><p>分析顯示，植物面對致病與無害真菌時，啟動的反應路徑有所不同。團隊也觀察細胞外囊泡中的蛋白質。這類小型囊泡能在細胞之間運送物質；植物的囊泡富含與免疫功能相關的蛋白質，提供了它們可能參與防禦反應的線索。</p><p>致病真菌的細胞外囊泡則帶有多種具毒性作用的蛋白質。研究團隊指出，這些蛋白質可能與植物細胞內的蛋白質或酵素互動，參與感染過程。由植物與真菌雙方的蛋白質資訊一起觀察，研究人員得以更細緻地追查病原如何影響宿主，以及植物如何回應。</p><p>【方法已擴及其他生物材料】</p><p>團隊另在秀麗隱桿線蟲、青蛙胚胎、海膽、細菌、酵母及動物細胞等材料測試這套樣本製備方法。德拉瓦大學已有超過15個實驗室利用相關技術，研究發育、感染、免疫及其他生物問題；技術也已授權分析設備業者CDS Analytical。</p><p>這項研究的直接成果是一套蛋白質分析工具，以及菸草與真菌互動時可進一步追查的蛋白質線索。它讓植物病害研究能更深入比較感染過程中的細胞反應，但目前談的仍是研究方法與機制探索，並非田間病害診斷產品。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：New method helps researchers study proteins involved in plant health, disease<br>原始網址：<a href="https://phys.org/news/2026-10-method-proteins-involved-health-disease.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-10-method-proteins-involved-health-disease.html</a><br>發布日期：2026-10-13</div></article></main>
+<main><article class="article"><h1>在植物細胞內分析蛋白質，看見菸草對真菌的不同反應</h1><div class="meta"><span>發布日 2026-10-18</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/389.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/389.webp" alt="在植物細胞內分析蛋白質，看見菸草對真菌的不同反應" loading="lazy" referrerpolicy="no-referrer"></a><p>研究植物病害時，除了知道葉片是否出現症狀，研究人員也希望進一步了解：感染前後，植物細胞中的哪些蛋白質發生變化？真菌與植物各自釋放哪些物質，進而影響感染或防禦？</p><p>蛋白質體學能一次分析大量蛋白質，但植物組織具有細胞壁，樣本製備並不容易。傳統做法通常先把葉片、花粉或種子等材料磨碎，再用多道化學程序萃取蛋白質；流程可能耗費數日，少量樣本中的材料也可能在處理過程中流失。</p><p>美國德拉瓦大學研究團隊在《Plant Physiology》發表一種細胞內蛋白質分析方法，改變了樣本製備的順序：先以甲醇處理組織，再於細胞內進行蛋白質消化與後續分析。</p><p>【減少萃取步驟，保留觀察細胞狀態的資訊】</p><p>甲醇處理可協助固定樣本，使研究人員在製備蛋白質時，仍保有判讀細胞原有狀態所需的資訊。團隊接著在細胞內處理蛋白質，而非一開始就將所有組織磨碎、完整萃取蛋白質後才分析。</p><p>研究人員認為，這種方式有助於在樣本量有限時，仍穩定辨識並定量大量蛋白質。對感染研究而言，研究者便能比較健康及患病組織的蛋白質組成，尋找與植物防禦或病原作用有關的變化。</p><p>【致病與無害真菌，引發不同反應路徑】</p><p>團隊以菸草葉片進行試驗，比較健康葉片，以及接觸致病或無害真菌後的葉片。真菌在植物周圍普遍存在，但只有部分會造成特定植物生病；研究人員希望透過蛋白質變化，找出植物如何辨別及回應不同真菌。</p><p>分析顯示，植物面對致病與無害真菌時，啟動的反應路徑有所不同。團隊也觀察細胞外囊泡中的蛋白質。這類小型囊泡能在細胞之間運送物質；植物的囊泡富含與免疫功能相關的蛋白質，提供了它們可能參與防禦反應的線索。</p><p>致病真菌的細胞外囊泡則帶有多種具毒性作用的蛋白質。研究團隊指出，這些蛋白質可能與植物細胞內的蛋白質或酵素互動，參與感染過程。由植物與真菌雙方的蛋白質資訊一起觀察，研究人員得以更細緻地追查病原如何影響宿主，以及植物如何回應。</p><p>【方法已擴及其他生物材料】</p><p>團隊另在秀麗隱桿線蟲、青蛙胚胎、海膽、細菌、酵母及動物細胞等材料測試這套樣本製備方法。德拉瓦大學已有超過15個實驗室利用相關技術，研究發育、感染、免疫及其他生物問題；技術也已授權分析設備業者CDS Analytical。</p><p>這項研究的直接成果是一套蛋白質分析工具，以及菸草與真菌互動時可進一步追查的蛋白質線索。它讓植物病害研究能更深入比較感染過程中的細胞反應，但目前談的仍是研究方法與機制探索，並非田間病害診斷產品。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：New method helps researchers study proteins involved in plant health, disease<br>原始網址：<a href="https://phys.org/news/2026-10-method-proteins-involved-health-disease.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-10-method-proteins-involved-health-disease.html</a><br>發布日期：2026-10-13</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../449/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="449" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/449.webp" width="1672" height="941" alt="稻田SU抗藥性雜草管理，選藥要看有效成分與田間草相" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../449/" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="449" data-ga-position="1" data-ga-relation-type="same_topic">稻田SU抗藥性雜草管理，選藥要看有效成分與田間草相</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div><div class="rcard"><a class="rthumb" href="../364/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="364" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/364.webp" width="1672" height="941" alt="害蟲藏在大豆莖內，研究用植株振動建立早期監測方法" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../364/" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="364" data-ga-position="2" data-ga-relation-type="same_topic">害蟲藏在大豆莖內，研究用植株振動建立早期監測方法</a></h3><div class="meta"><span>發布日 2026-10-09</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div><div class="rcard"><a class="rthumb" href="../401/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="401" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/401.webp" width="1672" height="941" alt="同樣抑制ALS，藥劑結構不同也可能面對相同抗藥性問題" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../401/" data-ga-event="related_article_click" data-ga-current-article-id="389" data-ga-target-article-id="401" data-ga-position="3" data-ga-relation-type="same_topic">同樣抑制ALS，藥劑結構不同也可能面對相同抗藥性問題</a></h3><div class="meta"><span>發布日 2026-10-18</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../388/" data-ga-event="article_navigation_click" data-ga-current-article-id="389" data-ga-target-article-id="388" data-ga-direction="previous" title="糧食已經種出來，為何仍在採收後大量損耗？"><span class="dir">← 上一篇</span><span class="ttl">糧食已經種出來，為何仍在採收後大量損耗？</span></a><a class="next" href="../390/" data-ga-event="article_navigation_click" data-ga-current-article-id="389" data-ga-target-article-id="390" data-ga-direction="next" title="農食科技本週觀察：種子、田間技術與食品原料多線取得資金"><span class="dir">下一篇 →</span><span class="ttl">農食科技本週觀察：種子、田間技術與食品原料多線取得資金</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
 <footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
 內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
 </body>

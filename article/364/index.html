@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>害蟲藏在大豆莖內，研究用植株振動建立早期監測方法 - 農業科技觀測站</title>
+<title>害蟲藏在大豆莖內，研究用植株振動建立早期監測方法｜農業科技觀測站</title>
 <meta name="description" content="美國跨校團隊測試 Insect Eavesdropper，將感測器固定在植物上，記錄莖內害蟲取食與移動產生的細微振動，再利用機器學習分析活動特徵。目前研究以大豆莖內害蟲 Dectes texanus 為主要對象，仍處於田間資料蒐集與模型建立階段。">
 <link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/364/">
-<meta property="og:title" content="害蟲藏在大豆莖內，研究用植株振動建立早期監測方法 - 農業科技觀測站">
+<meta property="og:title" content="害蟲藏在大豆莖內，研究用植株振動建立早期監測方法｜農業科技觀測站">
 <meta property="og:description" content="美國跨校團隊測試 Insect Eavesdropper，將感測器固定在植物上，記錄莖內害蟲取食與移動產生的細微振動，再利用機器學習分析活動特徵。目前研究以大豆莖內害蟲 Dectes texanus 為主要對象，仍處於田間資料蒐集與模型建立階段。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="農業科技觀測站">
@@ -59,6 +59,35 @@ h2{font-size:19px;margin:26px 0 10px;}
 .article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
 .src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
 .empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
 footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 </style>
@@ -80,7 +109,16 @@ footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12
     <button>搜尋</button>
   </form>
 </div></header>
-<main><article class="article"><h1>害蟲藏在大豆莖內，研究用植株振動建立早期監測方法</h1><div class="meta"><span>發布日 2026-10-09</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/364.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/364.webp" alt="害蟲藏在大豆莖內，研究用植株振動建立早期監測方法" loading="lazy" referrerpolicy="no-referrer"></a><p>田間蟲害調查多半依靠目視觀察、誘捕或採樣，但部分害蟲會鑽入莖部、藏在地下，或在不容易巡查的時間活動，等到作物外觀出現明顯症狀時，危害可能已經持續一段時間。美國跨校研究團隊正在測試 Insect Eavesdropper，把感測器固定在植物上，記錄昆蟲取食與移動產生的細微振動，再利用機器學習分析其中的活動特徵。</p><p>設備目前已放進大豆田與棉花溫室測試，研究重點包括建立正確的昆蟲－振動資料、排除田間環境雜訊，以及確認感測器能否長時間穩定運作。系統目前仍處於資料蒐集與模型建立階段。</p><p>【感測器記錄昆蟲經由植物組織傳遞的振動】</p><p>昆蟲在植株內取食、鑽蛀或移動時，會產生人耳不易察覺的微小振動。Insect Eavesdropper 將感測設備裝在植物上，持續記錄這些振動，再從長時間資料中分析可能與昆蟲活動有關的模式。</p><p>堪薩斯州立大學研究人員把設備裝在大豆植株上，連續記錄數天，之後拆除設備並仔細檢查植株，確認實際存在的昆蟲與活動痕跡。只有把感測資料與實際蟲害逐一配對，後續的機器學習模型才有可靠的訓練資料。</p><p>田間環境也增加辨識難度。風吹、雨滴、植株晃動與其他生物活動都可能產生振動，因此系統必須分辨目標昆蟲與環境雜訊。</p><p>【先測試藏在大豆莖內的 Dectes texanus】</p><p>目前重點測試的對象是 Dectes texanus（soybean stem borer），幼蟲會鑽入大豆莖內。昆蟲進入植物組織後，從外觀不容易確認，傳統調查有時需要切開植株才能檢查。</p><p>研究人員因此記錄幼蟲在莖內取食與移動時產生的振動，希望找出可以重複辨識的特徵。如果同類訊號能在不同田間條件下穩定出現，感測器就有機會在不破壞植株的情況下及早偵測害蟲活動。</p><p>目前系統還不能把每一段振動直接判定為特定昆蟲，仍需要大量已確認來源的田間資料提高辨識能力。</p><p>【大量連續資料需要機器學習協助分析】</p><p>感測器連續記錄數天會產生大量資料，人工無法逐段判讀，因此計畫同時結合昆蟲學、工程、人工智慧與統計分析。威斯康辛大學麥迪遜分校團隊負責開發機器學習模型，合作團隊則負責田間布署、設備運作與實際蟲害確認。</p><p>這也反映農業感測系統的基本條件：模型準確度不只取決於演算法，前端資料品質及每一段訊號能否正確對應到實際昆蟲同樣重要。</p><p>開發團隊也把工具開放給其他學術研究單位使用，希望累積更多作物、昆蟲與環境條件下的資料，進一步測試系統能否跨場域使用。</p><p>【連續監測可以協助安排巡查位置與時間】</p><p>目視調查、誘捕與田間採樣仍然是確認害蟲種類與危害程度的重要方法，但巡查人力無法持續監測每一株作物，植株內部或地下害蟲也較難從外觀提早察覺。</p><p>Insect Eavesdropper 的用途，是持續記錄植株振動，當某個位置出現異常活動模式，再安排人員前往檢查。若後續辨識能力足夠，這些資料可協助安排巡田、決定採樣位置，也可能成為判斷防治時機的參考資訊。</p><p>目前仍需確認不同環境下的辨識準確度、設備穩定性與長期布署方式。它現階段比較接近蟲害早期預警的研究工具，尚未發展成可以自動辨識各類害蟲的商業監測系統。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Listening to hidden insects could give farmers an early warning of crop pests<br>原始網址：<a href="https://phys.org/news/2026-10-hidden-insects-farmers-early-crop.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-10-hidden-insects-farmers-early-crop.html</a><br>發布日期：2026-10-07</div></article></main>
+<main><article class="article"><h1>害蟲藏在大豆莖內，研究用植株振動建立早期監測方法</h1><div class="meta"><span>發布日 2026-10-09</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/c/">IPM與農藥減量</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/364.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/364.webp" alt="害蟲藏在大豆莖內，研究用植株振動建立早期監測方法" loading="lazy" referrerpolicy="no-referrer"></a><p>田間蟲害調查多半依靠目視觀察、誘捕或採樣，但部分害蟲會鑽入莖部、藏在地下，或在不容易巡查的時間活動，等到作物外觀出現明顯症狀時，危害可能已經持續一段時間。美國跨校研究團隊正在測試 Insect Eavesdropper，把感測器固定在植物上，記錄昆蟲取食與移動產生的細微振動，再利用機器學習分析其中的活動特徵。</p><p>設備目前已放進大豆田與棉花溫室測試，研究重點包括建立正確的昆蟲－振動資料、排除田間環境雜訊，以及確認感測器能否長時間穩定運作。系統目前仍處於資料蒐集與模型建立階段。</p><p>【感測器記錄昆蟲經由植物組織傳遞的振動】</p><p>昆蟲在植株內取食、鑽蛀或移動時，會產生人耳不易察覺的微小振動。Insect Eavesdropper 將感測設備裝在植物上，持續記錄這些振動，再從長時間資料中分析可能與昆蟲活動有關的模式。</p><p>堪薩斯州立大學研究人員把設備裝在大豆植株上，連續記錄數天，之後拆除設備並仔細檢查植株，確認實際存在的昆蟲與活動痕跡。只有把感測資料與實際蟲害逐一配對，後續的機器學習模型才有可靠的訓練資料。</p><p>田間環境也增加辨識難度。風吹、雨滴、植株晃動與其他生物活動都可能產生振動，因此系統必須分辨目標昆蟲與環境雜訊。</p><p>【先測試藏在大豆莖內的 Dectes texanus】</p><p>目前重點測試的對象是 Dectes texanus（soybean stem borer），幼蟲會鑽入大豆莖內。昆蟲進入植物組織後，從外觀不容易確認，傳統調查有時需要切開植株才能檢查。</p><p>研究人員因此記錄幼蟲在莖內取食與移動時產生的振動，希望找出可以重複辨識的特徵。如果同類訊號能在不同田間條件下穩定出現，感測器就有機會在不破壞植株的情況下及早偵測害蟲活動。</p><p>目前系統還不能把每一段振動直接判定為特定昆蟲，仍需要大量已確認來源的田間資料提高辨識能力。</p><p>【大量連續資料需要機器學習協助分析】</p><p>感測器連續記錄數天會產生大量資料，人工無法逐段判讀，因此計畫同時結合昆蟲學、工程、人工智慧與統計分析。威斯康辛大學麥迪遜分校團隊負責開發機器學習模型，合作團隊則負責田間布署、設備運作與實際蟲害確認。</p><p>這也反映農業感測系統的基本條件：模型準確度不只取決於演算法，前端資料品質及每一段訊號能否正確對應到實際昆蟲同樣重要。</p><p>開發團隊也把工具開放給其他學術研究單位使用，希望累積更多作物、昆蟲與環境條件下的資料，進一步測試系統能否跨場域使用。</p><p>【連續監測可以協助安排巡查位置與時間】</p><p>目視調查、誘捕與田間採樣仍然是確認害蟲種類與危害程度的重要方法，但巡查人力無法持續監測每一株作物，植株內部或地下害蟲也較難從外觀提早察覺。</p><p>Insect Eavesdropper 的用途，是持續記錄植株振動，當某個位置出現異常活動模式，再安排人員前往檢查。若後續辨識能力足夠，這些資料可協助安排巡田、決定採樣位置，也可能成為判斷防治時機的參考資訊。</p><p>目前仍需確認不同環境下的辨識準確度、設備穩定性與長期布署方式。它現階段比較接近蟲害早期預警的研究工具，尚未發展成可以自動辨識各類害蟲的商業監測系統。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Listening to hidden insects could give farmers an early warning of crop pests<br>原始網址：<a href="https://phys.org/news/2026-10-hidden-insects-farmers-early-crop.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-10-hidden-insects-farmers-early-crop.html</a><br>發布日期：2026-10-07</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../449/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="449" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/449.webp" width="1672" height="941" alt="稻田SU抗藥性雜草管理，選藥要看有效成分與田間草相" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../449/" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="449" data-ga-position="1" data-ga-relation-type="same_topic">稻田SU抗藥性雜草管理，選藥要看有效成分與田間草相</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div><div class="rcard"><a class="rthumb" href="../389/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="389" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/389.webp" width="1672" height="941" alt="在植物細胞內分析蛋白質，看見菸草對真菌的不同反應" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../389/" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="389" data-ga-position="2" data-ga-relation-type="same_topic">在植物細胞內分析蛋白質，看見菸草對真菌的不同反應</a></h3><div class="meta"><span>發布日 2026-10-18</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div><div class="rcard"><a class="rthumb" href="../401/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="401" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/401.webp" width="1672" height="941" alt="同樣抑制ALS，藥劑結構不同也可能面對相同抗藥性問題" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../401/" data-ga-event="related_article_click" data-ga-current-article-id="364" data-ga-target-article-id="401" data-ga-position="3" data-ga-relation-type="same_topic">同樣抑制ALS，藥劑結構不同也可能面對相同抗藥性問題</a></h3><div class="meta"><span>發布日 2026-10-18</span></div><div><a class="tag" href="../../topic/c/">IPM與農藥減量</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../362/" data-ga-event="article_navigation_click" data-ga-current-article-id="364" data-ga-target-article-id="362" data-ga-direction="previous" title="固氮酶怎麼停止作用？產甲烷古菌以PII蛋白調節固氮"><span class="dir">← 上一篇</span><span class="ttl">固氮酶怎麼停止作用？產甲烷古菌以PII蛋白調節固氮</span></a><a class="next" href="../366/" data-ga-event="article_navigation_click" data-ga-current-article-id="364" data-ga-target-article-id="366" data-ga-direction="next" title="食品科技投資退潮後，Peakbridge把焦點轉向營養健康與AI"><span class="dir">下一篇 →</span><span class="ttl">食品科技投資退潮後，Peakbridge把焦點轉向營養健康與…</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
 <footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
 內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
 </body>

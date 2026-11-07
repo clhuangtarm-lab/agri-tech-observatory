@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AI辨識未清洗馬鈴薯，每小時最高分選10公噸 - 農業科技觀測站</title>
+<title>AI辨識未清洗馬鈴薯，每小時最高分選10公噸｜農業科技觀測站</title>
 <meta name="description" content="慕尼黑工業大學(TUM)機械工程系學生Benedikt Keßler以自身馬鈴薯農場背景創立新創公司Karevo，開發以逾10萬張影像訓練的AI光學辨識系統，可在每小時分選10噸馬鈴薯、辨識準確率達95%，能偵測異物及腐爛、龜裂、金針蟲害等7類缺陷，並可直接處理未經清洗的馬鈴薯，適合中小型農場使用。">
 <link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/192/">
-<meta property="og:title" content="AI辨識未清洗馬鈴薯，每小時最高分選10公噸 - 農業科技觀測站">
+<meta property="og:title" content="AI辨識未清洗馬鈴薯，每小時最高分選10公噸｜農業科技觀測站">
 <meta property="og:description" content="慕尼黑工業大學(TUM)機械工程系學生Benedikt Keßler以自身馬鈴薯農場背景創立新創公司Karevo，開發以逾10萬張影像訓練的AI光學辨識系統，可在每小時分選10噸馬鈴薯、辨識準確率達95%，能偵測異物及腐爛、龜裂、金針蟲害等7類缺陷，並可直接處理未經清洗的馬鈴薯，適合中小型農場使用。">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="農業科技觀測站">
@@ -59,6 +59,35 @@ h2{font-size:19px;margin:26px 0 10px;}
 .article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
 .src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
 .empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
 footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
 </style>
@@ -80,7 +109,16 @@ footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12
     <button>搜尋</button>
   </form>
 </div></header>
-<main><article class="article"><h1>AI辨識未清洗馬鈴薯，每小時最高分選10公噸</h1><div class="meta"><span>發布日 2026-08-15</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/germany/">德國</a></div><a href="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" alt="AI辨識未清洗馬鈴薯，每小時最高分選10公噸" loading="lazy" referrerpolicy="no-referrer"></a><p>馬鈴薯分選需要逐顆檢查外觀，作業人員往往得長時間站在充滿噪音與粉塵的環境中。德國新創公司Karevo因此開發AI光學分選設備，透過超過10萬張影像訓練模型，辨識馬鈴薯損傷的準確率達95％，每小時最高可處理10公噸。</p><p>這套設備的另一項特點，是能直接辨識未清洗的馬鈴薯。不同產區的土壤、品種及儲藏條件，會使馬鈴薯表面呈現明顯差異，傳統辨識方法容易受到泥土與外觀變化影響。Karevo則可依農場實際處理的馬鈴薯調整AI模型，提高系統對不同原料狀態的適應性。</p><p>【可辨識異物及7類缺陷】</p><p>馬鈴薯通過輸送帶時，光學系統會拍攝外觀影像，再由AI模型判讀是否需要分流。系統目前可辨識異物，以及腐爛、裂傷、金針蟲危害等7類缺陷，辨識馬鈴薯損傷的準確率達到95％。</p><p>共同創辦人Benedikt Keßler成長於馬鈴薯農場，熟悉人工分選的工作負擔。他在慕尼黑工業大學攻讀機械工程期間，開始構想以AI協助馬鈴薯分選，並於碩士論文研究階段投入技術開發。考量小型及家庭農場常面臨設備價格高、體積大及維修不易等問題，團隊將設備設計得較小型，並採用模組化結構，方便維護及整合至既有分選系統，設備已於2025年秋季進入市場。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Sorting potatoes with AI<br>原始網址：<a href="https://phys.org/news/2026-08-potatoes-ai.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-08-potatoes-ai.html</a><br>發布日期：2026-08-11</div></article></main>
+<main><article class="article"><h1>AI辨識未清洗馬鈴薯，每小時最高分選10公噸</h1><div class="meta"><span>發布日 2026-08-15</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/germany/">德國</a></div><a href="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://i.ibb.co/m5L9c16H/Chat-GPT-Image-2026-8-15-12-46-06.png" alt="AI辨識未清洗馬鈴薯，每小時最高分選10公噸" loading="lazy" referrerpolicy="no-referrer"></a><p>馬鈴薯分選需要逐顆檢查外觀，作業人員往往得長時間站在充滿噪音與粉塵的環境中。德國新創公司Karevo因此開發AI光學分選設備，透過超過10萬張影像訓練模型，辨識馬鈴薯損傷的準確率達95％，每小時最高可處理10公噸。</p><p>這套設備的另一項特點，是能直接辨識未清洗的馬鈴薯。不同產區的土壤、品種及儲藏條件，會使馬鈴薯表面呈現明顯差異，傳統辨識方法容易受到泥土與外觀變化影響。Karevo則可依農場實際處理的馬鈴薯調整AI模型，提高系統對不同原料狀態的適應性。</p><p>【可辨識異物及7類缺陷】</p><p>馬鈴薯通過輸送帶時，光學系統會拍攝外觀影像，再由AI模型判讀是否需要分流。系統目前可辨識異物，以及腐爛、裂傷、金針蟲危害等7類缺陷，辨識馬鈴薯損傷的準確率達到95％。</p><p>共同創辦人Benedikt Keßler成長於馬鈴薯農場，熟悉人工分選的工作負擔。他在慕尼黑工業大學攻讀機械工程期間，開始構想以AI協助馬鈴薯分選，並於碩士論文研究階段投入技術開發。考量小型及家庭農場常面臨設備價格高、體積大及維修不易等問題，團隊將設備設計得較小型，並採用模組化結構，方便維護及整合至既有分選系統，設備已於2025年秋季進入市場。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Sorting potatoes with AI<br>原始網址：<a href="https://phys.org/news/2026-08-potatoes-ai.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-08-potatoes-ai.html</a><br>發布日期：2026-08-11</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../453/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="453" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/453.webp" width="1672" height="941" alt="FSR500噴灑機器人，以輕型機體與自行維修設計進行田間測試" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../453/" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="453" data-ga-position="1" data-ga-relation-type="same_topic">FSR500噴灑機器人，以輕型機體與自行維修設計進行田間測試</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../434/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="434" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/434.webp" width="1672" height="941" alt="AI辨識雜草後再處理，雷射、機械與點噴各有適用條件" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../434/" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="434" data-ga-position="2" data-ga-relation-type="same_topic">AI辨識雜草後再處理，雷射、機械與點噴各有適用條件</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../440/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="440" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/440.webp" width="1672" height="941" alt="集中光脈衝逐株除草，Earth Rover 如何安排設備與回本計算？" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../440/" data-ga-event="related_article_click" data-ga-current-article-id="192" data-ga-target-article-id="440" data-ga-position="3" data-ga-relation-type="same_topic">集中光脈衝逐株除草，Earth Rover 如何安排設備與回本計算？</a></h3><div class="meta"><span>發布日 2026-10-24</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../191/" data-ga-event="article_navigation_click" data-ga-current-article-id="192" data-ga-target-article-id="191" data-ga-direction="previous" title="刈草不必只能焚燒，也能轉為低碳園藝資材"><span class="dir">← 上一篇</span><span class="ttl">刈草不必只能焚燒，也能轉為低碳園藝資材</span></a><a class="next" href="../193/" data-ga-event="article_navigation_click" data-ga-current-article-id="192" data-ga-target-article-id="193" data-ga-direction="next" title="X光斷層掃描解密葉片內部構造，助育種降低作物「蒸散耗水」"><span class="dir">下一篇 →</span><span class="ttl">X光斷層掃描解密葉片內部構造，助育種降低作物「蒸散耗水」</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
 <footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
 內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
 </body>
