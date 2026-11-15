@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播｜農業科技觀測站</title>
+<meta name="description" content="北卡羅來納州立大學在Sandhills研究站，以遠端操控無人機拍攝棉花田，利用農場端伺服器與AI辨識長度超過3英尺的缺株段，搭配定位誤差約正負1英寸的衛星網路製作補播地圖。團隊正開發地面機器人沿行列自主落種，另進行大豆蒸散遙測與多感測器3D作物表型研究；目前缺株定位與機器人原型已展示，補播後產量效果">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/513/">
+<meta property="og:title" content="無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播｜農業科技觀測站">
+<meta property="og:description" content="北卡羅來納州立大學在Sandhills研究站，以遠端操控無人機拍攝棉花田，利用農場端伺服器與AI辨識長度超過3英尺的缺株段，搭配定位誤差約正負1英寸的衛星網路製作補播地圖。團隊正開發地面機器人沿行列自主落種，另進行大豆蒸散遙測與多感測器3D作物表型研究；目前缺株定位與機器人原型已展示，補播後產量效果">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/513/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/513.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播", "description": "北卡羅來納州立大學在Sandhills研究站，以遠端操控無人機拍攝棉花田，利用農場端伺服器與AI辨識長度超過3英尺的缺株段，搭配定位誤差約正負1英寸的衛星網路製作補播地圖。團隊正開發地面機器人沿行列自主落種，另進行大豆蒸散遙測與多感測器3D作物表型研究；目前缺株定位與機器人原型已展示，補播後產量效果尚無數據。", "datePublished": "2026-11-15", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/513/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/513.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播</h1><div class="meta"><span>發布日 2026-11-15</span><span>原文語言：英文</span><span>來源機構：news.ncsu.edu</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/us/">美國</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/513.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/513.webp" alt="無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播" loading="lazy" referrerpolicy="no-referrer"></a><p>美國北卡羅來納州立大學在Sandhills Research Station測試以無人機、AI與地面機器人處理棉花田缺株問題。無人機拍攝棉花行列後，農場端電腦辨識每株棉花，標出長度超過3英尺（約91公分）的空缺；研究團隊再將位置資料轉成數位補播地圖，供正在研發的自走地面機器人使用。這套系統把空中影像、田間運算與高精度定位串連起來，目的在於只補缺株，而不是把已有棉株的田區整片重播。</p><p>【缺株增加重播成本，也可能傷及已長出的棉株】<br>棉花播種後若遇低溫、積水、冰雹或幼苗死亡，原有種植行列會留下長短不一的空缺。農民可以維持原狀，但株數減少可能影響收成；若決定重新播種整塊田，則須再次投入種子、機械與作業時間，還可能傷及原本已建立的植株。</p><p>北卡州立大學棉花推廣專家Guy Collins指出，當地播種窗口較集中，發現缺株後還要在適當時間重新進場，作業安排並不容易。棉花種子成本可能超過每英畝100美元，因此研究團隊希望只辨識需要補播的幾段田壟，讓新的種子落在空缺處，減少全田重播的投入。</p><p>【遠端無人機自主起降，影像留在農場端處理】<br>生物與農業工程研究者Frank Bai團隊在北卡州Sandhills研究站示範的流程，從無人機停靠箱開始。研究人員Justin Macialek可以在約一個半小時車程外的Raleigh校園辦公室，以電腦監控研究站的無人機起降及飛行。這種超視距飛行使用美國聯邦航空總署核准的特別許可，飛行管理與一般現場目視操作不同。</p><p>無人機從具防候功能的停靠箱起飛，沿棉田逐行拍攝高解析度影像。AI模型找出單株棉花的位置，判斷哪一段行列缺株超過3英尺。為減少大型影像往返雲端耗費的傳輸時間，研究站在田間配置高效能電腦伺服器，由本地端完成影像運算。相關數位基礎設施源自AIRS（Automating Intelligence from Research Stations）計畫，目的在支援農業試驗站的自動資料蒐集與研究分析。</p><p>【精準座標傳給地面原型機，沿棉行移動補種】<br>團隊結合定位誤差約正負1英寸（約2.5公分）的衛星定位網路，將缺株區標記在數位地圖上，再交由自走地面機器人規劃田間行進。研究生ShengDao Du已建立車輛原型、安裝感測器並開發自主導航軟體，使機器人能在棉花行列間移動。完整系統下一階段將依地圖位置，在未出苗區落下新的種子。</p><p>棉花缺株辨識、定位地圖與地面機器人原型目前已有具體展示，但原文沒有提供自動落種後的出苗率、重播費用減幅或產量增加數據。機器人進場時如何避開既有植株、不同株距與田面條件如何影響補播作業，將是實際應用時的重要測試項目。</p><p>【同一研究平台也量測大豆蒸散與作物3D表型】<br>Bai實驗室還與美國農業部農業研究署合作，透過高頻率無人機飛行與熱影像，追蹤試驗大豆田冠層及葉片溫度，推算蒸散量（evapotranspiration），並將空拍資訊與田邊地面感測站資料比對。研究希望為耐旱大豆育種提供更密集的水分使用表型。Sandhills研究站約95％土壤屬排水快速的Candor砂土，土壤養分易隨水流失，因此能觀察作物在逆境下的生長與用水差異。</p><p>另一項合作由電機與電腦工程團隊參與，整合熱紅外、多光譜等感測資料，建立作物3D數位模型，進一步量測葉角分布、總葉面積、冠層高度及葉片尺度的蒸散等性狀。這兩條研究方向與棉花補播共享無人機、感測與影像分析技術，但分別處理水分逆境表型與三維植株構造。三者的共同基礎是把原本需要人工進田蒐集的資料轉為可重複、具空間位置的田間測量，而各自的效益仍依其試驗結果判定。</p><div class="src"><strong>原始資料來源</strong><br>原文標題：On the Ground and In the Air<br>原始網址：<a href="https://news.ncsu.edu/2026/11/on-the-ground-and-in-the-air/" target="_blank" rel="noopener nofollow">https://news.ncsu.edu/2026/11/on-the-ground-and-in-the-air/</a><br>發布日期：2026-11-05</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../515/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="515" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/515.webp" width="1672" height="941" alt="WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../515/" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="515" data-ga-position="1" data-ga-relation-type="same_topic">WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../516/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="516" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/516.webp" width="1672" height="941" alt="石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../516/" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="516" data-ga-position="2" data-ga-relation-type="same_topic">石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../503/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="503" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/503.webp" width="1672" height="941" alt="日本核定草莓送風授粉與有機水田自走除草開發計畫，設定30％附加價值與80％省工指標" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../503/" data-ga-event="related_article_click" data-ga-current-article-id="513" data-ga-target-article-id="503" data-ga-position="3" data-ga-relation-type="same_topic">日本核定草莓送風授粉與有機水田自走除草開發計畫，設定30％附加價值與80％省工指標</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../511/" data-ga-event="article_navigation_click" data-ga-current-article-id="513" data-ga-target-article-id="511" data-ga-direction="previous" title="蠶絲與蟲膠製成水下疫苗微針，已在1至2公克虹鱒驗證載荷傳送"><span class="dir">← 上一篇</span><span class="ttl">蠶絲與蟲膠製成水下疫苗微針，已在1至2公克虹鱒驗證載荷傳送</span></a><a class="next" href="../514/" data-ga-event="article_navigation_click" data-ga-current-article-id="513" data-ga-target-article-id="514" data-ga-direction="next" title="藍莓根部甲蟲幼蟲以DNA確認為Prionus imbricornis，六處農場調查釐清寄主"><span class="dir">下一篇 →</span><span class="ttl">藍莓根部甲蟲幼蟲以DNA確認為Prionus imbrico…</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

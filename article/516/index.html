@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯｜農業科技觀測站</title>
+<meta name="description" content="KAUST以雷射刻寫石墨烯電極與寬約0.4毫米的微針製成硬幣大小的葉片貼附式感測器，連續記錄蘆薈葉內過氧化氫。溫室強光試驗在約19°C即出現快速上升，28°C時反應更強，兩者約一小時後均回落。這是受控環境的植物氧化逆境感測原型，尚未建立田間作物通用判讀門檻。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/516/">
+<meta property="og:title" content="石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯｜農業科技觀測站">
+<meta property="og:description" content="KAUST以雷射刻寫石墨烯電極與寬約0.4毫米的微針製成硬幣大小的葉片貼附式感測器，連續記錄蘆薈葉內過氧化氫。溫室強光試驗在約19°C即出現快速上升，28°C時反應更強，兩者約一小時後均回落。這是受控環境的植物氧化逆境感測原型，尚未建立田間作物通用判讀門檻。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/516/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/516.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯", "description": "KAUST以雷射刻寫石墨烯電極與寬約0.4毫米的微針製成硬幣大小的葉片貼附式感測器，連續記錄蘆薈葉內過氧化氫。溫室強光試驗在約19°C即出現快速上升，28°C時反應更強，兩者約一小時後均回落。這是受控環境的植物氧化逆境感測原型，尚未建立田間作物通用判讀門檻。", "datePublished": "2026-11-15", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/516/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/516.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯</h1><div class="meta"><span>發布日 2026-11-15</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/516.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/516.webp" alt="石墨烯微針在蘆薈葉內連續量測過氧化氫，強光與28°C使訊號上升更明顯" loading="lazy" referrerpolicy="no-referrer"></a><p>沙烏地阿拉伯阿布杜拉國王科技大學（KAUST）研究團隊開發硬幣大小的葉片感測器，利用雷射刻寫石墨烯電極與細微針頭，連續記錄植物體內過氧化氫（H₂O₂）的變化。研究人員把裝置貼在溫室蘆薈（Aloe vera）葉片上，施加強光刺激；約19°C時，過氧化氫訊號迅速上升，當溫度提高至28°C時，升幅更加明顯，兩組反應約在一小時後下降。研究刊於2026年11月12日《Cell Reports Physical Science》。</p><p>【過氧化氫是防禦訊號，也反映氧化逆境】<br>植物在正常生理代謝中會產生少量過氧化氫，並利用它在細胞間傳遞訊息、啟動對病原菌的防禦反應。當環境出現過強光照或高溫等刺激時，葉片可能迅速累積過氧化氫，濃度過高則會傷害組織。這種化學變化常發生在肉眼可見的萎凋、褐變或其他生理症狀之前，研究者希望量測的是植物內部的即時反應，而不只是外界氣溫與葉片外觀。</p><p>傳統檢測過氧化氫通常需要剪取部分植物組織再分析，採樣會干擾植株，也難以長時間在同一個位置記錄變化。KAUST設計的穿戴式感測器讓研究人員能在保留原有葉片的情況下追蹤訊號時間序列。</p><p>【雷射刻寫石墨烯電極，微針接觸葉片內部液體】<br>團隊以雷射製造對過氧化氫有反應的石墨烯感測電極，裝入約小硬幣大小的裝置，再利用寬約0.4毫米的微針進入葉片，取得少量組織內液體供感測。電極將化學變化轉成可連續記錄的訊號，減少反覆剪葉採樣的需求。</p><p>微針尺寸小，研究人員觀察在試驗條件下沒有造成嚴重的葉片傷害。這項構造同時保留葉片原本生長的位置，讓光照與溫度條件改變後，仍能在同一植株上追蹤反應。感測器的作用是量測H₂O₂，並不是直接測出植株完整的乾旱或病害等級。</p><p>【約19°C與28°C，強光刺激後的短時間反應不同】<br>研究在溫室蘆薈上比較強光刺激與生長溫度。約19°C條件下，研究者打開強光後，感測器幾乎立即偵測到過氧化氫訊號上升；當生長溫度提高至28°C時，訊號增加更劇烈。兩組訊號都在大約一小時後回落。這個時間變化顯示葉片會快速調整內部氧化訊號，且溫度能改變強光下的反應程度。</p><p>過氧化氫同時參與病原防禦、光照與多種逆境反應，因此農場要把這種訊號用來預警，還需要建立不同作物、葉齡、氣候和灌溉狀態的對照資料。目前完成的是蘆薈在受控環境中的感測試驗，未提供可直接預測產量或田間損失的通用閾值。裝置讓葉內化學反應成為可連續觀察的資訊，是後續植物逆境判讀模型的測量基礎。</p><p>論文：Mufeeda Mundummal等，〈Wearable Laser Scribed Graphene Integrated Microneedle Sensor for Continuous in Planta Oxidative Stress Monitoring〉，《Cell Reports Physical Science》，2026年。DOI：https://doi.org/10.1016/j.xcrp.2026.103630</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Sensors track stress in plants in real time—without hurting them in the process<br>原始網址：<a href="https://phys.org/news/2026-11-sensors-track-stress-real.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-11-sensors-track-stress-real.html</a><br>發布日期：2026-11-12</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../524/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="524" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/524.webp" width="1672" height="941" alt="福壽螺高風險水田區由空拍地形預測，2023年田間試驗平均減藥47％" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../524/" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="524" data-ga-position="1" data-ga-relation-type="same_topic">福壽螺高風險水田區由空拍地形預測，2023年田間試驗平均減藥47％</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../545/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="545" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/545.webp" width="1672" height="941" alt="MIT獲最高5,300萬美元研發AI雜草控制候選物，設計、篩選與溫室試驗分工" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../545/" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="545" data-ga-position="2" data-ga-relation-type="same_topic">MIT獲最高5,300萬美元研發AI雜草控制候選物，設計、篩選與溫室試驗分工</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../513/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="513" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/513.webp" width="1672" height="941" alt="無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../513/" data-ga-event="related_article_click" data-ga-current-article-id="516" data-ga-target-article-id="513" data-ga-position="3" data-ga-relation-type="same_topic">無人機定位棉田逾3英尺缺株區，北卡州團隊研發地面機器人精準補播</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../515/" data-ga-event="article_navigation_click" data-ga-current-article-id="516" data-ga-target-article-id="515" data-ga-direction="previous" title="WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台"><span class="dir">← 上一篇</span><span class="ttl">WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放…</span></a><a class="next" href="../518/" data-ga-event="article_navigation_click" data-ga-current-article-id="516" data-ga-target-article-id="518" data-ga-direction="next" title="水果功能性包裝比較保水、乙烯去除與智慧感測，材料結構決定生理調控效果"><span class="dir">下一篇 →</span><span class="ttl">水果功能性包裝比較保水、乙烯去除與智慧感測，材料結構決定生理…</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>
