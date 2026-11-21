@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>John Deere收購Orchard Robotics，串接逐株果園影像、產量預測與變量作業｜農業科技觀測站</title>
+<meta name="description" content="John Deere收購專注果園影像與作物資料的Orchard Robotics，規劃串接車載相機、邊緣AI分析、FruitScope平台與農機控制系統。影像可用於逐株樹木的開花、果實大小及數量監測，未來希望形成變量疏花、精準噴施等作業指令；交易金額未公布，企業提供的預測準確率尚非獨立試驗結果。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/555/">
+<meta property="og:title" content="John Deere收購Orchard Robotics，串接逐株果園影像、產量預測與變量作業｜農業科技觀測站">
+<meta property="og:description" content="John Deere收購專注果園影像與作物資料的Orchard Robotics，規劃串接車載相機、邊緣AI分析、FruitScope平台與農機控制系統。影像可用於逐株樹木的開花、果實大小及數量監測，未來希望形成變量疏花、精準噴施等作業指令；交易金額未公布，企業提供的預測準確率尚非獨立試驗結果。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/555/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/555.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "John Deere收購Orchard Robotics，串接逐株果園影像、產量預測與變量作業", "description": "John Deere收購專注果園影像與作物資料的Orchard Robotics，規劃串接車載相機、邊緣AI分析、FruitScope平台與農機控制系統。影像可用於逐株樹木的開花、果實大小及數量監測，未來希望形成變量疏花、精準噴施等作業指令；交易金額未公布，企業提供的預測準確率尚非獨立試驗結果。", "datePublished": "2026-11-21", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/555/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/555.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>John Deere收購Orchard Robotics，串接逐株果園影像、產量預測與變量作業</h1><div class="meta"><span>發布日 2026-11-21</span><span>原文語言：英文</span><span>來源機構：AgFunder News</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/555.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/555.webp" alt="John Deere收購Orchard Robotics，串接逐株果園影像、產量預測與變量作業" loading="lazy" referrerpolicy="no-referrer"></a><p>美國農機製造商John Deere收購果園作物影像分析公司Orchard Robotics，規劃將後者的逐株果樹資料連結至John Deere農機、精準作業系統及管理平台。Orchard Robotics的技術以安裝在農機上的相機取得果樹影像，再由車載AI電腦分析果實、開花及樹冠狀態，將結果送入FruitScope供農戶判讀。兩家公司希望逐步把「看見每棵樹」轉為「對每棵樹執行不同作業」，但整合後的田間效益仍屬後續目標。</p><p>【車載相機在農機通過果樹行間時蒐集影像】</p><p>Orchard Robotics的相機系統可安裝於拖拉機及其他農用車輛，沿果園行間移動時連續取像；John Deere的收購公告描述，每次通過田區可分析每棵樹數百張影像。辨識項目包括果實數量、大小、顏色、樹冠狀態、生長變化及部分逆境徵象。果樹不是均質的整片田區；相鄰樹木的著果量與成熟進度可能不同，因此逐株資料可協助農戶判斷採收、人工配置或投入資材的差異。</p><p>【先在車上計算，降低回傳原始影像的負擔】</p><p>大量高解析度影像如果全部上傳雲端，會受到果園行動通訊品質與資料傳輸成本限制。Orchard Robotics以車載NVIDIA Jetson電腦進行部分影像處理，先產生可供管理決策的資料，再導入FruitScope平台。使用者可依個別樹木查看果實負載、尺寸及其他指標，而非只得到整片果園的平均值。</p><p>【將逐株資料轉成變量疏花與田間作業指令】</p><p>雙方舉例說明未來應用：蘋果疏花管理需要調整不同樹木的花量。若相機在開花過程中辨識各樹花量，系統可製作樹別變量疏花圖，再由可調整施用量的設備執行不同劑量。兩家公司將此列為下一階段整合方向，尚未公布跨設備疏花試驗的作業成本或節藥量比較數據。</p><p>部分農場即使已有可變量噴藥機，仍可能需要人員依行動App接收工作位置與作業內容；另一些農場則可將資料連結機械施用。對農場而言，系統是否能把影像分析結果轉成即時可執行的指令，將影響它的實際用途。</p><p>【企業提出的預測準確率與經營效益尚待獨立比較】</p><p>創辦人Charles Wu表示，其平台在部分應用的產量預測準確率超過95％，可用於估計雇工、採果箱、冷藏空間及銷售承諾需求，並稱已在美國等地部署數百套系統。這些是企業受訪時提供的使用與效益描述，原報導未交代95％如何計算、比較組、誤差定義與不同作物的獨立驗證結果；不能把它當成所有果園預測誤差均低於5％。</p><p>Orchard Robotics將作為John Deere子公司繼續運作，交易價格未公開。收購意味著兩家公司技術整合方向已明確，但今後能否在不同果樹、品種、機具與農場規模穩定提供變量作業，仍要看實際產品整合與田間表現。</p><p>資料來源： John Deere收購公告（2026-11-19），John Deere Acquires Orchard AI，https://www.deere.com/en-us/john-deere-news/john-deere-acquires-orchard-ai</p><div class="src"><strong>原始資料來源</strong><br>原文標題：John Deere Orchard Robotics deal signals growing value of actionable farm data, says ag robotics OG<br>原始網址：<a href="https://agfundernews.com/john-deere-orchard-robotics-deal-signals-growing-value-of-actionable-farm-data-says-ag-robotics-og" target="_blank" rel="noopener nofollow">https://agfundernews.com/john-deere-orchard-robotics-deal-signals-growing-value-of-actionable-farm-data-says-ag-robotics-og</a><br>發布日期：2026-11-20</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../576/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="576" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/576.webp" width="1672" height="941" alt="靜岡市規劃以衛星影像與「森ノート」整合森林整備優先序，試驗尚待完成" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../576/" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="576" data-ga-position="1" data-ga-relation-type="same_topic">靜岡市規劃以衛星影像與「森ノート」整合森林整備優先序，試驗尚待完成</a></h3><div class="meta"><span>發布日 2026-11-21</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../515/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="515" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/515.webp" width="1672" height="941" alt="WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../515/" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="515" data-ga-position="2" data-ga-relation-type="same_topic">WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../549/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="549" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/549.webp" width="1672" height="941" alt="PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../549/" data-ga-event="related_article_click" data-ga-current-article-id="555" data-ga-target-article-id="549" data-ga-position="3" data-ga-relation-type="same_topic">PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一</a></h3><div class="meta"><span>發布日 2026-11-21</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../553/" data-ga-event="article_navigation_click" data-ga-current-article-id="555" data-ga-target-article-id="553" data-ga-direction="previous" title="大豆天然品系可耐受低劑量汰克草飄移，田間試驗以標示用量五百分之一辨識品系差異"><span class="dir">← 上一篇</span><span class="ttl">大豆天然品系可耐受低劑量汰克草飄移，田間試驗以標示用量五百分…</span></a><a class="next" href="../559/" data-ga-event="article_navigation_click" data-ga-current-article-id="555" data-ga-target-article-id="559" data-ga-direction="next" title="日本農家以稻草作田間覆蓋、家畜墊料與堆肥，須兼顧含水與高碳氮比"><span class="dir">下一篇 →</span><span class="ttl">日本農家以稻草作田間覆蓋、家畜墊料與堆肥，須兼顧含水與高碳氮…</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一｜農業科技觀測站</title>
+<meta name="description" content="賓州州立大學開發PSUMamba模型，以三條處理路徑整合高光譜影像的光譜、時間與空間資訊。研究使用204個波段、8個觀測時間點的洋菇受控損傷資料，平均分類準確率94.47％、敏感度98.98％，運算操作量約為ViT模型的十分之一；其他作物及實際田間逆境辨識能力尚待驗證。">
+<link rel="canonical" href="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/549/">
+<meta property="og:title" content="PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一｜農業科技觀測站">
+<meta property="og:description" content="賓州州立大學開發PSUMamba模型，以三條處理路徑整合高光譜影像的光譜、時間與空間資訊。研究使用204個波段、8個觀測時間點的洋菇受控損傷資料，平均分類準確率94.47％、敏感度98.98％，運算操作量約為ViT模型的十分之一；其他作物及實際田間逆境辨識能力尚待驗證。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="農業科技觀測站">
+<meta property="og:url" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/article/549/">
+<meta property="og:image" content="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/549.webp">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+@media (prefers-color-scheme:dark){:root{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}}
+:root[data-theme="light"]{--bg:#f7f8f6;--card:#fff;--ink:#1f2a22;--sub:#5c6b5f;--line:#e2e7de;
+  --accent:#2f7d4f;--accent-ink:#fff;--tag:#eef4ee;--warn:#b25a00;}
+:root[data-theme="dark"]{--bg:#151a16;--card:#1e251f;--ink:#e8efe8;--sub:#9fb0a2;
+  --line:#2c352d;--accent:#4faa72;--accent-ink:#0c110d;--tag:#26302a;--warn:#e0a458;}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;line-height:1.75;}
+a{color:inherit;}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5;}
+.bar{max-width:1000px;margin:0 auto;padding:14px 20px;display:flex;flex-wrap:wrap;gap:12px 18px;align-items:center;}
+.brand{font-weight:800;font-size:19px;text-decoration:none;margin-right:auto;}
+.brand small{font-weight:500;color:var(--sub);font-size:12px;margin-left:8px;}
+nav a{color:var(--sub);text-decoration:none;font-size:14px;padding:4px 2px;border-bottom:2px solid transparent;}
+nav a:hover{color:var(--ink);}
+.search{display:flex;gap:6px;}
+.search input{padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);}
+.search button{padding:6px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);cursor:pointer;font-size:14px;}
+main{max-width:1000px;margin:0 auto;padding:26px 20px 60px;}
+h1{font-size:26px;margin:0 0 6px;text-wrap:balance;}
+h2{font-size:19px;margin:26px 0 10px;}
+.lead{color:var(--sub);margin:0 0 20px;max-width:60ch;}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:0 0 14px;}
+.card h3{margin:0 0 6px;font-size:17px;}
+.card h3 a{text-decoration:none;}
+.card h3 a:hover{color:var(--accent);}
+.meta{font-size:12.5px;color:var(--sub);display:flex;flex-wrap:wrap;gap:6px 12px;margin:6px 0;}
+.tag{display:inline-block;background:var(--tag);color:var(--sub);border-radius:999px;padding:2px 10px;font-size:12px;text-decoration:none;margin:2px 4px 2px 0;}
+.tag:hover{color:var(--ink);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.article{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:26px 30px;}
+.article p{margin:0 0 1em;}
+.article img.hero{width:100%;height:auto;border-radius:10px;margin:0 0 18px;}
+.article-html{line-height:1.85;}
+.article-html p{margin:0 0 1em;}
+.article-html img{max-width:100%;height:auto;display:block;margin:14px 0;border-radius:8px;}
+.article-html figure{margin:14px 0;}
+.article-html figcaption{font-size:13px;color:var(--sub);margin-top:4px;}
+.article-html a{color:var(--accent);text-decoration:underline;}
+.article-html blockquote{margin:0 0 1em;padding-left:14px;border-left:3px solid var(--line);color:var(--sub);}
+.src{font-size:13px;color:var(--sub);border-top:1px solid var(--line);margin-top:20px;padding-top:14px;}
+.empty{color:var(--sub);padding:30px 0;text-align:center;}
+.cardimg{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);}
+.cardimg.cover{object-fit:cover;}
+.cardimg.contain{object-fit:contain;background:var(--tag);}
+.hcard{display:grid;grid-template-columns:280px minmax(0,1fr);gap:18px;align-items:start;}
+.hcard .hthumb{display:block;}
+.hcard .hbody h3{margin-top:0;}
+.related{margin-top:30px;}
+.related h2{margin:0 0 12px;}
+.related-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;}
+.rcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:8px;min-width:0;}
+.rcard .rthumb{display:block;}
+.rcard h3{margin:0;font-size:15px;line-height:1.5;}
+.rcard h3 a{text-decoration:none;}
+.rcard h3 a:hover{color:var(--accent);}
+.rcard .meta{margin:0;}
+.pager{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.pager a{display:block;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 16px;text-decoration:none;min-width:0;}
+.pager a:hover{border-color:var(--accent);}
+.pager .dir{display:block;font-size:12.5px;color:var(--sub);}
+.pager .ttl{display:block;font-size:14.5px;line-height:1.5;}
+.pager .next{text-align:right;}
+.pager .spacer{display:block;}
+@media (max-width:720px){
+  .hcard{grid-template-columns:1fr;gap:10px;}
+  .related-grid{grid-template-columns:1fr;}
+  .pager{grid-template-columns:1fr;}
+  .pager .next{text-align:left;}
+  .pager .spacer{display:none;}
+}
+footer{max-width:1000px;margin:0 auto;padding:20px;color:var(--sub);font-size:12.5px;border-top:1px solid var(--line);}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNWDFFSY3S"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-DNWDFFSY3S");</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一", "description": "賓州州立大學開發PSUMamba模型，以三條處理路徑整合高光譜影像的光譜、時間與空間資訊。研究使用204個波段、8個觀測時間點的洋菇受控損傷資料，平均分類準確率94.47％、敏感度98.98％，運算操作量約為ViT模型的十分之一；其他作物及實際田間逆境辨識能力尚待驗證。", "datePublished": "2026-11-21", "inLanguage": "zh-Hant", "url": "https://clhuangtarm-lab.github.io/agri-tech-observatory/article/549/", "author": {"@type": "Organization", "name": "農業科技觀測站"}, "publisher": {"@type": "Organization", "name": "農業科技觀測站"}, "image": ["https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/549.webp"]}</script>
+
+</head>
+<body>
+<header><div class="bar">
+  <a class="brand" href="../../">農業科技觀測站 <small>國際農業科技情報</small></a>
+  <nav>
+    <a href="../../">首頁</a>
+    <a href="../../articles/">文章總覽</a>
+    <a href="../../topics/">主題分類</a>
+  </nav>
+  <form class="search" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="關鍵字搜尋…" aria-label="搜尋">
+    <button>搜尋</button>
+  </form>
+</div></header>
+<main><article class="article"><h1>PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一</h1><div class="meta"><span>發布日 2026-11-21</span><span>原文語言：英文</span><span>來源機構：Phys.org 農業</span><a class="tag" href="../../topic/a/">智慧農業與資料治理</a><a class="tag" href="../../country/global/">國際</a></div><a href="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/549.webp" target="_blank" rel="noopener noreferrer"><img class="hero" src="https://clhuangtarm-lab.github.io/agri-tech-observatory/images/cards/549.webp" alt="PSUMamba以高光譜影像辨識洋菇品質劣變，準確率94.47％、運算量約為ViT十分之一" loading="lazy" referrerpolicy="no-referrer"></a><p>美國賓州州立大學（Penn State）研究團隊開發名為PSUMamba的人工智慧模型，結合高光譜影像中的光譜、時間與空間資訊，辨識洋菇（Agaricus bisporus）受到不同處理後的品質劣變。研究使用204個光譜波段及8個觀測時間點的資料，模型平均分類準確率達94.47％、敏感度98.98％、ROC曲線下面積（AUC-ROC）99.36％，運算量約為對照Vision Transformer模型的十分之一。這些數據來自受控處理的洋菇試驗，尚未代表露天農田作物的病害、乾旱或缺肥辨識效果。</p><p>【高光譜影像記錄多個波長的反射訊號】</p><p>一般彩色相機主要記錄紅、綠、藍三個色彩通道；高光譜相機則在許多相鄰波長分別量測物體反射光的強度，形成每個像素的光譜資料。生物組織的色素、水分及其他化學、生理性質改變時，可能連帶影響反射光譜，因此高光譜影像可用於觀察外觀變化以外的品質訊號。但同一個樣本具有多波段影像，如果還要追蹤不同時間點，就會增加處理所需的記憶體、運算時間及能源。PSUMamba的研究目的，是盡量保留這些資訊，同時降低辨識的計算負擔。</p><p>【光譜、時間及空間資訊各走一條處理路徑】</p><p>團隊以Mamba型狀態空間神經網路建立三條分析路徑。光譜路徑提取不同波長的反射特徵；時間路徑追蹤樣本在不同觀測時點的變化；空間路徑則分析影像區域分布及紋理。三條路徑的特徵再整合，讓模型不只依賴單次觀察的色彩或紋理作判斷。研究另透過移除部分路徑的消融試驗比較其貢獻，發現三類資訊互補，整合後能改善分類效果。</p><p>【三種受控損傷、八個時間點建立評估資料】</p><p>研究在賓州州立大學的設施環境中，對洋菇安排三類處理：熱衝擊組浸入約140°F（約60°C）的水30秒，模擬加工熱暴露；微波組照射30秒以造成局部細胞損傷；機械傷害組則施以穿刺、摩擦及撞擊，模擬搬運所造成的外力。未處理洋菇作為對照，在相同環境下觀察。團隊取得204個光譜波段、8個時間點的影像，用來分類不同處理所造成的變化。這些都是實驗設定的處理類別，與田間自然發生的病蟲害或水分逆境不同。</p><p>【分類準確率94.47％，計算操作量約減至十分之一】</p><p>論文使用按來源分層的資料切分，並在五組隨機種子下重複評估；平均分類準確率為94.47％（±2.17個百分點）、敏感度98.98％（±1.25個百分點）、AUC-ROC 99.36％（±0.40個百分點）。準確率衡量整體預測正確比例，敏感度關注目標類別的檢出情況，AUC-ROC則是不同判定門檻下的區分能力，不能將99.36％解讀為單一門檻下的正確率。PSUMamba約含235萬個模型參數；研究所採用的ViT對照條件下，PSUMamba資料處理及預測的計算操作量約為十分之一。這不等於農場全部設備的耗電量已降低90％，相機、資料傳輸及影像前處理仍會耗用資源。</p><p>【田間其他作物的適用性尚未驗證】</p><p>團隊接下來將測試其他作物及實際栽培環境，並評估模型如何與溫室監測、田間感測器、農業機器人及空拍系統連接。後續試驗須重新建立標記資料，檢查不同作物、光照與逆境組合下的分類表現及運算需求。</p><p>資料來源： Wang, W.等（2026），Triple-path bidirectional Mamba enables linear-complexity temporal hyperspectral plant stress classification，Scientific Reports，https://doi.org/10.1038/s41598-026-74809-5；Penn State，2026-11-20，https://www.psu.edu/news/research/story/novel-ai-model-can-reliably-detect-crop-stress-less-computing-power</p><div class="src"><strong>原始資料來源</strong><br>原文標題：Tested on mushrooms, an AI model shows potential for detecting crop stress with far fewer computations<br>原始網址：<a href="https://phys.org/news/2026-11-mushrooms-ai-potential-crop-stress.html" target="_blank" rel="noopener nofollow">https://phys.org/news/2026-11-mushrooms-ai-potential-crop-stress.html</a><br>發布日期：2026-11-20</div></article><section class="related" aria-labelledby="related-h"><h2 id="related-h">延伸閱讀</h2><div class="related-grid"><div class="rcard"><a class="rthumb" href="../515/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="515" data-ga-position="1" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/515.webp" width="1672" height="941" alt="WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../515/" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="515" data-ga-position="1" data-ga-relation-type="same_topic">WheatAI可分析9項小麥性狀，團隊規劃2028年免費開放影像表型平台</a></h3><div class="meta"><span>發布日 2026-11-15</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../576/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="576" data-ga-position="2" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/576.webp" width="1672" height="941" alt="靜岡市規劃以衛星影像與「森ノート」整合森林整備優先序，試驗尚待完成" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../576/" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="576" data-ga-position="2" data-ga-relation-type="same_topic">靜岡市規劃以衛星影像與「森ノート」整合森林整備優先序，試驗尚待完成</a></h3><div class="meta"><span>發布日 2026-11-21</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div><div class="rcard"><a class="rthumb" href="../577/" tabindex="-1" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="577" data-ga-position="3" data-ga-relation-type="same_topic"><img class="cardimg cover" src="../../images/cards/577.webp" width="1672" height="941" alt="靜岡縣與森未來簽五年木材利用協定，整合木材資料庫與AI選材輔助" loading="lazy" decoding="async" onerror="this.parentNode.style.display='none'"></a><h3><a href="../577/" data-ga-event="related_article_click" data-ga-current-article-id="549" data-ga-target-article-id="577" data-ga-position="3" data-ga-relation-type="same_topic">靜岡縣與森未來簽五年木材利用協定，整合木材資料庫與AI選材輔助</a></h3><div class="meta"><span>發布日 2026-11-21</span></div><div><a class="tag" href="../../topic/a/">智慧農業與資料治理</a></div></div></div></section><nav class="pager" aria-label="文章導覽"><a class="prev" href="../547/" data-ga-event="article_navigation_click" data-ga-current-article-id="549" data-ga-target-article-id="547" data-ga-direction="previous" title="300人洗生雞肉操作研究找到水槽污染路徑，北卡州團隊據此改善食安宣導"><span class="dir">← 上一篇</span><span class="ttl">300人洗生雞肉操作研究找到水槽污染路徑，北卡州團隊據此改善…</span></a><a class="next" href="../550/" data-ga-event="article_navigation_click" data-ga-current-article-id="549" data-ga-target-article-id="550" data-ga-direction="next" title="根部DNA定序加上重量校正，辨識混生覆蓋作物的地下根量組成"><span class="dir">下一篇 →</span><span class="ttl">根部DNA定序加上重量校正，辨識混生覆蓋作物的地下根量組成</span></a></nav><script>
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[data-ga-event]');
+  if(!a||typeof gtag!=='function')return;
+  var d=a.dataset,name=d.gaEvent,p={transport_type:'beacon'};
+  if(name==='related_article_click'){p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.position=Number(d.gaPosition);p.relation_type=d.gaRelationType;}
+  else{p.current_article_id=d.gaCurrentArticleId;p.target_article_id=d.gaTargetArticleId;p.direction=d.gaDirection;}
+  gtag('event',name,p);
+});
+</script></main>
+<footer>農業科技觀測站 · 為個人研究與內容經營用途。<br>
+內容為AI翻譯並經人工複查後發布，聯絡信箱：clhuang.tarm@gmail.com。</footer>
+</body>
+</html>
